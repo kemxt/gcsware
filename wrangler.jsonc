@@ -1,0 +1,10 @@
+{
+  "name": "gcsware",
+  "compatibility_date": "2026-10-10",
+  "assets": {
+    "directory": "./public"
+  },
+  "routes": [
+    { "pattern": "gcsware.com", "custom_domain": true }
+  ]
+}
