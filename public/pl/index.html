@@ -4,17 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GCS Ware: soft do CS2 aktualizowany po każdym patchu</title>
-<meta name="description" content="GCS Ware to lekki soft do CS2 z przejrzystym menu w grze, configami w chmurze i aktualizacją do 6 godzin po każdym patchu Valve. Klucz od ręki, wsparcie na Discordzie 24/7.">
+<meta name="description" content="GCS Ware to lekki soft do CS2 z przejrzystym menu w grze, configami w chmurze i aktualizacją docelowo do 6 godzin po każdym patchu Valve. Klucz od ręki, wsparcie na Discordzie 24/7.">
+<link rel="canonical" href="https://gcsware.com/pl/">
+<link rel="alternate" hreflang="en" href="https://gcsware.com/">
+<link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/">
+<link rel="alternate" hreflang="x-default" href="https://gcsware.com/">
 <link rel="icon" type="image/png" href="../assets/logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#080C10}
 a{color:#FFE418}a:hover{color:#FFBF00}
-.disp{font-family:'Chakra Petch',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-0.01em}
-.mono{font-family:'JetBrains Mono',monospace}
-.eyebrow{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.18em;display:inline-flex;align-items:center;gap:10px}
+.disp{font-family:system-ui, sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-0.01em}
+.mono{font-family:ui-monospace, monospace}
+[hidden]{display:none !important}
+.eyebrow{font-family:ui-monospace, monospace;font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.18em;display:inline-flex;align-items:center;gap:10px}
 .eyebrow:before{content:"";width:22px;height:2px;background:currentColor}
 .grid-bg{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:56px 56px}
 .stripes{background-image:repeating-linear-gradient(-28deg,transparent 0 46px,rgba(255,228,24,.06) 46px 92px)}
@@ -44,6 +46,7 @@ details[open]{border-color:#3A4651 !important}
 .shine{background-image:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.45) 50%,transparent 65%);background-size:200% 100%;animation:shine 3.2s linear infinite}
 .mobile-cta{display:none}
 .toast{display:flex}
+.toast[hidden]{display:none}
 .gm-sec{font-size:11.5px;color:#8A8A8A;letter-spacing:.04em;padding:8px 14px 4px}
 .gm-item{display:flex;align-items:center;gap:9px;margin:2px 8px;padding:6px 10px;border-radius:7px;color:#C9C9C9;font-size:12.5px;border:1px solid transparent}
 .gm-item svg{color:#BDBDBD}
@@ -63,13 +66,9 @@ details[open]{border-color:#3A4651 !important}
 .gm-sl i{position:absolute;top:50%;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;background:#F2F2F2}
 .gm-box{width:82px;height:20px;box-sizing:border-box;border:1px solid #333;border-radius:5px;background:#141414;color:#E6E6E6;font-size:12px;display:flex;align-items:center;justify-content:center}
 .gm-dd{display:flex;align-items:center;justify-content:space-between;height:24px;padding:0 10px;border:1px solid #333;border-radius:6px;background:#242424;color:#E6E6E6;font-size:12.5px}
-.lang-switch{display:inline-flex;gap:4px;padding:4px;background:#0F151C;border:1px solid #26313B;border-radius:10px}
-.lang-switch button{min-height:40px;padding:0 18px;border:0;border-radius:7px;background:transparent;color:#9AA6B0;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s}
-.lang-switch button:hover{color:#F2F4F5}
-.lang-switch button[aria-pressed="true"]{background:#FFE418;color:#0B1015}
-.lang-switch button:focus-visible,.yt-poster:focus-visible{outline:2px solid #FFE418;outline-offset:3px}
+.yt-poster:focus-visible{outline:2px solid #FFE418;outline-offset:3px}
 .site-lang{display:inline-flex;gap:2px;padding:3px;background:#0F151C;border:1px solid #2A3540;border-radius:9px}
-.site-lang a{display:inline-flex;align-items:center;justify-content:center;min-width:38px;min-height:36px;padding:0 6px;box-sizing:border-box;border-radius:6px;color:#9AA6B0;text-decoration:none;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em}
+.site-lang a{display:inline-flex;align-items:center;justify-content:center;min-width:38px;min-height:36px;padding:0 6px;box-sizing:border-box;border-radius:6px;color:#9AA6B0;text-decoration:none;font-family:system-ui, sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em}
 .site-lang a:hover{color:#F2F4F5}
 .site-lang a[aria-current]{background:#26313B;color:#F2F4F5}
 .site-lang a:focus-visible{outline:2px solid #FFE418;outline-offset:2px}
@@ -94,7 +93,7 @@ details[open]{border-color:#3A4651 !important}
 </style>
 </head>
 <body>
-<div style="font-family: 'Barlow', sans-serif; color: #F2F4F5; background: #080C10; min-height: 100vh; overflow-x: hidden; overflow-x: clip">
+<div style="font-family: system-ui, sans-serif; color: #F2F4F5; background: #080C10; min-height: 100vh; overflow-x: hidden; overflow-x: clip">
 
   <!-- Nav -->
   <nav aria-label="Menu główne" style="position: sticky; top: 0; z-index: 30; background: rgba(8,12,16,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #1A232B">
@@ -113,7 +112,7 @@ details[open]{border-color:#3A4651 !important}
       <div style="display: flex; gap: 12px; align-items: center">
         <div class="site-lang" role="group" aria-label="Język strony"><a href="../" hreflang="en" lang="en" title="English">EN</a><a href="./" aria-current="page" lang="pl" title="Polski">PL</a></div>
         <a class="btn-ghost nav-login" href="#" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid #2A3540; border-radius: 8px; color: #F2F4F5; text-decoration: none; font-weight: 600; font-size: 15px">Zaloguj się</a>
-        <a class="btn-primary nav-cta" href="#pricing" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; background: #FFE418; color: #0B1015; border-radius: 8px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 0.04em">Kup dostęp <span style="background: #0B1015; color: #FFE418; font-size: 12px; padding: 2px 6px; border-radius: 4px">-17%</span></a>
+        <a class="btn-primary nav-cta" href="#pricing" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; background: #FFE418; color: #0B1015; border-radius: 8px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 0.04em">Kup dostęp <span style="background: #0B1015; color: #FFE418; font-size: 12px; padding: 2px 6px; border-radius: 4px">-17%</span></a>
       </div>
     </div>
   </nav>
@@ -132,13 +131,13 @@ details[open]{border-color:#3A4651 !important}
           </span>
           <span style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid #2A3540; background: rgba(17,24,32,0.8); border-radius: 999px; font-size: 14px; font-weight: 600; color: #C4CDD4">
             <span style="display: flex"><span style="width: 22px; height: 22px; border-radius: 50%; background: #3A4651; border: 2px solid #111820"></span><span style="width: 22px; height: 22px; border-radius: 50%; background: #4A5663; border: 2px solid #111820; margin-left: -8px"></span><span style="width: 22px; height: 22px; border-radius: 50%; background: #FFBF00; border: 2px solid #111820; margin-left: -8px"></span></span>
-            500+ graczy już z&nbsp;nami
+            1000+ graczy już z&nbsp;nami
           </span>
         </div>
-        <h1 class="hero-title disp" style="margin: 0; font-size: 76px; line-height: 0.98">Dość porażek.<br>Zajmij <span style="color: #0B1015; background: #FFE418; padding: 0 12px; display: inline-block; transform: skew(-8deg)"><span style="display: inline-block; transform: skew(8deg)">fotel lidera.</span></span></h1>
-        <p style="margin: 0; font-size: 20px; line-height: 1.55; color: #B5C0C8; max-width: 560px">GCS Ware to lekki <strong style="color: #F2F4F5">soft do CS2</strong>, na który gracze się przesiadają i&nbsp;zostają na dobre. Przejrzyste menu w&nbsp;grze, configi na jedno kliknięcie, zero spadków FPS i <strong style="color: #F2F4F5">aktualizacja do 6&nbsp;godzin po każdym patchu Valve.</strong></p>
+        <h1 class="hero-title disp" style="margin: 0; font-size: 76px; line-height: 0.98"><span class="eyebrow" style="display: flex; color: #FFE418; line-height: 1.4; margin-bottom: 18px">GCS Ware do CS2</span> Dość porażek.<br>Zajmij <span style="color: #0B1015; background: #FFE418; padding: 0 12px; display: inline-block; transform: skew(-8deg)"><span style="display: inline-block; transform: skew(8deg)">fotel lidera.</span></span></h1>
+        <p style="margin: 0; font-size: 20px; line-height: 1.55; color: #B5C0C8; max-width: 560px">GCS Ware to lekki <strong style="color: #F2F4F5">soft do CS2</strong>, na który gracze się przesiadają i&nbsp;zostają na dobre. Przejrzyste menu w&nbsp;grze, configi na jedno kliknięcie, minimalny wpływ na FPS i <strong style="color: #F2F4F5">aktualizacja docelowo do 6&nbsp;godzin po każdym patchu Valve.</strong></p>
         <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
-          <a class="btn-primary shine" href="#pricing" style="display: inline-flex; align-items: center; gap: 12px; min-height: 64px; padding: 0 34px; background-color: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 20px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: 0 14px 40px rgba(255,228,24,0.35), inset 0 -3px 0 rgba(0,0,0,0.18)">
+          <a class="btn-primary shine" href="#pricing" style="display: inline-flex; align-items: center; gap: 12px; min-height: 64px; padding: 0 34px; background-color: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 20px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: 0 14px 40px rgba(255,228,24,0.35), inset 0 -3px 0 rgba(0,0,0,0.18)">
             Zgarnij 17% zniżki
             <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
           </a>
@@ -161,7 +160,7 @@ details[open]{border-color:#3A4651 !important}
       <div style="flex: 0 1 680px; min-width: 0; position: relative; display: flex; justify-content: center; padding: 40px 0">
         <img class="floaty" src="../assets/logo.png" alt="" aria-hidden="true" style="position: absolute; right: -40px; top: -30px; width: 150px; height: 150px; object-fit: contain; z-index: 3; filter: drop-shadow(0 24px 40px rgba(0,0,0,0.7))">
         <div class="menu-wrap" style="position: relative; z-index: 2">
-          <div class="gm hud" role="img" aria-label="Menu GCS Ware CS2 External: ustawienia aimbota dla pistoletów" style="width: 680px; height: 428px; display: flex; background: #121212; border: 1px solid #262626; border-radius: 10px; overflow: hidden; box-shadow: 0 50px 100px rgba(0,0,0,0.7), 0 0 0 8px rgba(255,255,255,0.02); font-family: 'Barlow', sans-serif; color: #E6E6E6; font-size: 12.5px; text-align: left">
+          <div class="gm hud" role="img" aria-label="Menu GCS Ware CS2 External: ustawienia aimbota dla pistoletów" style="width: 680px; height: 428px; display: flex; background: #121212; border: 1px solid #262626; border-radius: 10px; overflow: hidden; box-shadow: 0 50px 100px rgba(0,0,0,0.7), 0 0 0 8px rgba(255,255,255,0.02); font-family: system-ui, sans-serif; color: #E6E6E6; font-size: 12.5px; text-align: left">
             <!-- Sidebar -->
             <div style="width: 160px; flex-shrink: 0; background: #151515; border-right: 1px solid #222; display: flex; flex-direction: column">
               <div style="display: flex; align-items: flex-start; gap: 6px; padding: 10px 12px 8px">
@@ -233,11 +232,11 @@ details[open]{border-color:#3A4651 !important}
           <!-- floating chips -->
           <div style="position: absolute; left: -30px; bottom: -26px; background: #111820; border: 1px solid #2A3540; border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 3">
             <span style="width: 36px; height: 36px; border-radius: 8px; background: rgba(61,220,132,0.14); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3DDC84" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"></path><path d="M21 3v5h-5"></path></svg></span>
-            <span style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 14px">Aktualizacja do 6&nbsp;h</span><span class="mono" style="color: #9AA6B0; font-size: 12px">po każdym patchu CS2</span></span>
+            <span style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 14px">Cel aktualizacji: 6&nbsp;h</span><span class="mono" style="color: #9AA6B0; font-size: 12px">po każdym patchu CS2</span></span>
           </div>
           <div style="position: absolute; right: -16px; bottom: -30px; background: #FFE418; color: #0B1015; border-radius: 12px; padding: 10px 16px; display: flex; flex-direction: column; box-shadow: 0 20px 40px rgba(0,0,0,0.5); transform: rotate(3deg); z-index: 3">
             <span class="mono" style="font-size: 11px; font-weight: 700">WPŁYW NA FPS</span>
-            <span class="disp" style="font-size: 26px; line-height: 1">≈ 0</span>
+            <span class="disp" style="font-size: 26px; line-height: 1">Minimalny</span>
           </div>
         </div>
       </div>
@@ -247,8 +246,8 @@ details[open]{border-color:#3A4651 !important}
   <!-- Marquee -->
   <div aria-hidden="true" style="background: #FFE418; color: #0B1015; overflow: hidden; border-bottom: 1px solid #0B1015; transform: rotate(-1deg); margin: -10px -20px 0; position: relative; z-index: 4">
     <div class="marquee disp" style="display: flex; gap: 40px; white-space: nowrap; padding: 14px 0; font-size: 20px; width: max-content">
-      <span>Klucz od ręki</span><span>✦</span><span>Aktualizacje w&nbsp;dniu patcha</span><span>✦</span><span>Zero spadków FPS</span><span>✦</span><span>Wsparcie 24/7 na Discordzie</span><span>✦</span><span>Configi w&nbsp;chmurze</span><span>✦</span><span>Dostęp już od 1,99&nbsp;$</span><span>✦</span>
-      <span>Klucz od ręki</span><span>✦</span><span>Aktualizacje w&nbsp;dniu patcha</span><span>✦</span><span>Zero spadków FPS</span><span>✦</span><span>Wsparcie 24/7 na Discordzie</span><span>✦</span><span>Configi w&nbsp;chmurze</span><span>✦</span><span>Dostęp już od 1,99&nbsp;$</span><span>✦</span>
+      <span>Klucz od ręki</span><span>✦</span><span>Aktualizacje w&nbsp;dniu patcha</span><span>✦</span><span>Minimalny wpływ na FPS</span><span>✦</span><span>Wsparcie 24/7 na Discordzie</span><span>✦</span><span>Configi w&nbsp;chmurze</span><span>✦</span><span>Dostęp już od 1,99&nbsp;$</span><span>✦</span>
+      <span>Klucz od ręki</span><span>✦</span><span>Aktualizacje w&nbsp;dniu patcha</span><span>✦</span><span>Minimalny wpływ na FPS</span><span>✦</span><span>Wsparcie 24/7 na Discordzie</span><span>✦</span><span>Configi w&nbsp;chmurze</span><span>✦</span><span>Dostęp już od 1,99&nbsp;$</span><span>✦</span>
     </div>
   </div>
 
@@ -256,8 +255,8 @@ details[open]{border-color:#3A4651 !important}
   <!-- Stats -->
   <section aria-label="GCS Ware w liczbach" style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 24px">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: #1F2A33; border: 1px solid #1F2A33; border-radius: 16px; overflow: hidden">
-      <div style="background: #0D1319; padding: 28px; display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 44px; color: #FFE418; line-height: 1">500+</span><span style="color: #9AA6B0; font-size: 15px">graczy już korzysta z&nbsp;GCS Ware</span></div>
-      <div style="background: #0D1319; padding: 28px; display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 44px; color: #FFE418; line-height: 1">6&nbsp;h</span><span style="color: #9AA6B0; font-size: 15px">maks. czas aktualizacji po patchu Valve</span></div>
+      <div style="background: #0D1319; padding: 28px; display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 44px; color: #FFE418; line-height: 1">1000+</span><span style="color: #9AA6B0; font-size: 15px">graczy już korzysta z&nbsp;GCS Ware</span></div>
+      <div style="background: #0D1319; padding: 28px; display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 44px; color: #FFE418; line-height: 1">6&nbsp;h</span><span style="color: #9AA6B0; font-size: 15px">docelowy czas aktualizacji po patchu Valve</span></div>
       <div style="background: #0D1319; padding: 28px; display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 44px; color: #FFE418; line-height: 1">5&nbsp;min</span><span style="color: #9AA6B0; font-size: 15px">od zakupu do pierwszego meczu</span></div>
       <div style="background: #0D1319; padding: 28px; display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 44px; color: #FFE418; line-height: 1">70%</span><span style="color: #9AA6B0; font-size: 15px">klientów wraca po kolejną licencję</span></div>
     </div>
@@ -272,11 +271,11 @@ details[open]{border-color:#3A4651 !important}
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
       <div class="card" style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column">
         <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; color: #FFB4A8; font-weight: 600; font-size: 17px; background: rgba(255,90,70,0.06)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M18 6 6 18M6 6l12 12"></path></svg><span style="text-decoration: line-through; text-decoration-color: rgba(255,180,168,0.5)">Valve wypuszcza patch, a&nbsp;twój soft leży przez tydzień.</span></div>
-        <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; font-weight: 600; font-size: 17px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 6 9 17l-5-5"></path></svg>GCS Ware ma poprawkę w&nbsp;ciągu 6&nbsp;godzin. Za każdym razem.</div>
+        <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; font-weight: 600; font-size: 17px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 6 9 17l-5-5"></path></svg>GCS Ware stara się wydać poprawkę w&nbsp;ciągu 6&nbsp;godzin.</div>
       </div>
       <div class="card" style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column">
         <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; color: #FFB4A8; font-weight: 600; font-size: 17px; background: rgba(255,90,70,0.06)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M18 6 6 18M6 6l12 12"></path></svg><span style="text-decoration: line-through; text-decoration-color: rgba(255,180,168,0.5)">Przeładowane menu, przycinki i&nbsp;spadki FPS w&nbsp;środku clutcha.</span></div>
-        <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; font-weight: 600; font-size: 17px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 6 9 17l-5-5"></path></svg>Lekki i&nbsp;dopracowany. FPS-y zostają dokładnie tam, gdzie były.</div>
+        <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; font-weight: 600; font-size: 17px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 6 9 17l-5-5"></path></svg>Lekki i&nbsp;dopracowany, z&nbsp;minimalnym wpływem na FPS.</div>
       </div>
       <div class="card" style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column">
         <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; color: #FFB4A8; font-weight: 600; font-size: 17px; background: rgba(255,90,70,0.06)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M18 6 6 18M6 6l12 12"></path></svg><span style="text-decoration: line-through; text-decoration-color: rgba(255,180,168,0.5)">Odpowiedź na ticket po 3&nbsp;dniach. O&nbsp;ile w&nbsp;ogóle.</span></div>
@@ -285,21 +284,17 @@ details[open]{border-color:#3A4651 !important}
     </div>
   </section>
 
-  <!-- Demo video (English / Polski switch - video IDs live in DEMO_VIDEOS at the bottom) -->
+  <!-- Demo video: the poster links to the video; the script at the bottom swaps in the player on click -->
   <section id="demo" style="max-width: 1240px; margin: 0 auto; padding: 56px 24px; display: flex; flex-direction: column; gap: 24px">
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 24px">
       <div style="display: flex; flex-direction: column; gap: 14px">
         <span class="eyebrow" style="color: #FFE418">Demo</span>
         <h2 class="sec-title disp" style="margin: 0; font-size: 44px; line-height: 1.04">Zobacz w&nbsp;akcji</h2>
       </div>
-      <div class="lang-switch" role="group" aria-label="Język filmu">
-        <button type="button" data-lang="pl" aria-pressed="true">Polski</button>
-        <button type="button" data-lang="en" aria-pressed="false">English</button>
-      </div>
     </div>
     <div id="demo-player" class="hud yt-frame">
       <a class="yt-poster" href="https://www.youtube.com/watch?v=fp7E_L3bci4" target="_blank" rel="noopener" aria-label="Odtwórz: Prezentacja GCS Ware (po polsku)">
-        <img src="https://i.ytimg.com/vi/fp7E_L3bci4/maxresdefault.jpg" alt="" loading="lazy">
+        <img src="../assets/demo-pl.webp" alt="" loading="lazy">
         <span class="yt-play"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="#0B1015"><path d="M7 4v16l13-8z"></path></svg></span>
         <span class="yt-len mono">8:59</span>
       </a>
@@ -313,7 +308,7 @@ details[open]{border-color:#3A4651 !important}
         <span class="eyebrow" style="color: #FFE418">Co potrafi GCS Ware</span>
         <h2 class="sec-title disp" style="margin: 0; font-size: 52px; line-height: 1.04">Wszystko, czego potrzebujesz. Nic, co cię spowalnia.</h2>
       </div>
-      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B5C0C8; max-width: 380px">Działa od pierwszego uruchomienia. Bez grzebania w&nbsp;plikach, bez poradników i&nbsp;bez spadków FPS.</p>
+      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B5C0C8; max-width: 380px">Działa od pierwszego uruchomienia. Bez grzebania w&nbsp;plikach, bez poradników, z&nbsp;minimalnym wpływem na FPS.</p>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px">
       <article class="card wide-card" style="grid-column: span 2; min-width: 0; background: #0F151C; border: 1px solid #1F2A33; border-radius: 18px; padding: 32px; display: flex; flex-wrap: wrap; gap: 28px; align-items: center">
@@ -331,9 +326,9 @@ details[open]{border-color:#3A4651 !important}
       </article>
       <article class="card" style="min-width: 0; background: #FFE418; color: #0B1015; border: 1px solid #FFE418; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
         <span class="mono" style="font-size: 13px; font-weight: 700">02 / WYDAJNOŚĆ</span>
-        <h3 class="disp" style="margin: 0; font-size: 30px">Zero spadków FPS</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A10">Zoptymalizowany, natywny kod i&nbsp;minimalne zużycie zasobów. CS2 chodzi tak płynnie jak wcześniej.</p>
-        <span class="disp" style="font-size: 64px; line-height: 1; margin-top: auto">≈0%</span>
+        <h3 class="disp" style="margin: 0; font-size: 30px">Minimalny wpływ na FPS</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A10">Zoptymalizowany, natywny kod i&nbsp;minimalne zużycie zasobów, żeby CS2 dalej chodził płynnie.</p>
+        <span class="disp" style="font-size: 64px; line-height: 1; margin-top: auto">Lekki</span>
       </article>
       <article class="card" style="min-width: 0; background: #0F151C; border: 1px solid #1F2A33; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
         <span class="mono" style="color: #FFE418; font-size: 13px">03 / MENU</span>
@@ -352,8 +347,8 @@ details[open]{border-color:#3A4651 !important}
       </article>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
-      <a class="btn-primary" href="#pricing" style="display: inline-flex; align-items: center; gap: 10px; min-height: 58px; padding: 0 32px; background: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: 0 12px 34px rgba(255,228,24,0.25)">Odblokuj wszystko 17% taniej</a>
-      <span style="color: #9AA6B0; font-size: 14px">Promocja kończy się za <span class="mono" style="color: #F2F4F5"><span data-cd="d">00</span>d <span data-cd="h">00</span>h <span data-cd="m">00</span>m</span></span>
+      <a class="btn-primary" href="#pricing" style="display: inline-flex; align-items: center; gap: 10px; min-height: 58px; padding: 0 32px; background: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: 0 12px 34px rgba(255,228,24,0.25)">Odblokuj wszystko 17% taniej</a>
+      <span data-sale hidden style="color: #9AA6B0; font-size: 14px">Promocja kończy się za <span class="mono" style="color: #F2F4F5"><span data-cd="d">--</span>d <span data-cd="h">--</span>h <span data-cd="m">--</span>m</span></span>
     </div>
   </section>
 
@@ -380,7 +375,7 @@ details[open]{border-color:#3A4651 !important}
         <a class="card" href="#pricing" style="text-decoration: none; color: #F2F4F5; background: #0F151C; border: 2px solid #FFE418; border-radius: 18px; padding: 30px; display: flex; flex-direction: column; gap: 12px">
           <span class="mono" style="color: #FFE418; font-size: 13px">HARDKOR · NAJCZĘSTSZY WYBÓR</span>
           <h3 class="disp" style="margin: 0; font-size: 24px">„Codziennie odpalam mecze.”</h3>
-          <p style="margin: 0; color: #9AA6B0; font-size: 16px; line-height: 1.6">Miesiąc to priorytetowe aktualizacje za mniej niż 0,34&nbsp;$ dziennie.</p>
+          <p style="margin: 0; color: #9AA6B0; font-size: 16px; line-height: 1.6">Miesiąc to priorytetowe aktualizacje za jedyne 0,33&nbsp;$ dziennie.</p>
           <span style="color: #FFE418; font-weight: 700; margin-top: auto">Dostęp na miesiąc →</span>
         </a>
       </div>
@@ -399,14 +394,14 @@ details[open]{border-color:#3A4651 !important}
           <tr style="border-bottom: 1px solid #26313B">
             <th scope="col" style="text-align: left; padding: 20px 24px; color: #9AA6B0; font-weight: 600"></th>
             <th scope="col" class="disp" style="padding: 20px 24px; font-size: 18px; color: #0B1015; background: #FFE418">GCS WARE</th>
-            <th scope="col" style="padding: 20px 24px; font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 18px; color: #9AA6B0">Inne softy</th>
+            <th scope="col" style="padding: 20px 24px; font-family: system-ui, sans-serif; font-weight: 600; font-size: 18px; color: #9AA6B0">Inne softy</th>
           </tr>
         </thead>
         <tbody>
-          <tr style="border-bottom: 1px solid #1F2A33"><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Aktualizacja po patchu CS2</th><td style="text-align: center; padding: 18px 24px; font-weight: 700; color: #FFE418; background: rgba(255,228,24,0.05)">Maks. 6&nbsp;godzin</td><td style="text-align: center; padding: 18px 24px; color: #9AA6B0">Od kilku dni do kilku tygodni</td></tr>
+          <tr style="border-bottom: 1px solid #1F2A33"><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Aktualizacja po patchu CS2</th><td style="text-align: center; padding: 18px 24px; font-weight: 700; color: #FFE418; background: rgba(255,228,24,0.05)">Cel: 6&nbsp;godzin</td><td style="text-align: center; padding: 18px 24px; color: #9AA6B0">Od kilku dni do kilku tygodni</td></tr>
           <tr style="border-bottom: 1px solid #1F2A33"><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Czas instalacji</th><td style="text-align: center; padding: 18px 24px; font-weight: 700; color: #FFE418; background: rgba(255,228,24,0.05)">5&nbsp;minut</td><td style="text-align: center; padding: 18px 24px; color: #9AA6B0">Ręcznie, z&nbsp;poradnikiem</td></tr>
           <tr style="border-bottom: 1px solid #1F2A33"><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Wpływ na wydajność</th><td style="text-align: center; padding: 18px 24px; font-weight: 700; color: #FFE418; background: rgba(255,228,24,0.05)">Minimalny</td><td style="text-align: center; padding: 18px 24px; color: #9AA6B0">Odczuwalne spadki FPS</td></tr>
-          <tr style="border-bottom: 1px solid #1F2A33"><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Configi w&nbsp;chmurze</th><td style="text-align: center; padding: 18px 24px; background: rgba(255,228,24,0.05)"><svg role="img" aria-label="Tak" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></td><td style="text-align: center; padding: 18px 24px"><svg role="img" aria-label="Nie" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6E7A84" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></td></tr>
+          <tr style="border-bottom: 1px solid #1F2A33"><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Configi w&nbsp;chmurze</th><td style="text-align: center; padding: 18px 24px; font-weight: 700; color: #FFE418; background: rgba(255,228,24,0.05)">Wbudowane, jednym kliknięciem</td><td style="text-align: center; padding: 18px 24px; color: #9AA6B0">Zwykle brak</td></tr>
           <tr><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Czas odpowiedzi na ticket</th><td style="text-align: center; padding: 18px 24px; font-weight: 700; color: #FFE418; background: rgba(255,228,24,0.05)">Maks. 1&nbsp;godzina</td><td style="text-align: center; padding: 18px 24px; color: #9AA6B0">Często kilka dni</td></tr>
         </tbody>
       </table>
@@ -441,13 +436,13 @@ details[open]{border-color:#3A4651 !important}
     <div style="display: flex; flex-direction: column; gap: 18px; align-items: center; text-align: center">
       <span class="eyebrow" style="color: #FFE418">Cennik</span>
       <h2 class="sec-title disp" style="margin: 0; font-size: 56px; line-height: 1.02">Załap się na cenę startową</h2>
-      <p style="margin: 0; font-size: 18px; color: #B5C0C8">Płacisz raz, bez ukrytych opłat. Gdy licznik dojdzie do zera, ceny wracają do normy.</p>
+      <p style="margin: 0; font-size: 18px; color: #B5C0C8">Płacisz raz, bez ukrytych opłat.<span data-sale hidden> Gdy licznik dojdzie do zera, ceny wracają do normy.</span></p>
       <!-- Big countdown -->
-      <div role="timer" aria-label="Czas do końca promocji" style="display: flex; gap: 10px; margin-top: 6px">
-        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="d" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">00</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">DNI</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="h" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">00</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">GODZ</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="m" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">00</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">MIN</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="s" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">00</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">SEK</span></div>
+      <div role="timer" aria-label="Czas do końca promocji" data-sale hidden style="display: flex; gap: 10px; margin-top: 6px">
+        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="d" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">--</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">DNI</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="h" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">--</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">GODZ</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="m" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">--</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">MIN</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="s" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">--</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">SEK</span></div>
       </div>
     </div>
 
@@ -459,10 +454,9 @@ details[open]{border-color:#3A4651 !important}
         <div style="display: flex; flex-direction: column; gap: 12px; font-size: 16px; color: #C4CDD4">
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Wszystkie funkcje</span>
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Aktualizacje po patchach</span>
-          <span style="display: flex; gap: 10px; color: #5A6670"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5A6670" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>Bonusowy pakiet configów</span>
           <span style="display: flex; gap: 10px; color: #5A6670"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5A6670" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>Priorytetowe wsparcie</span>
         </div>
-        <a data-product="13203" class="btn-ghost" href="#" style="margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 54px; border: 1px solid #2A3540; border-radius: 12px; color: #F2F4F5; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 0.04em">Kup dostęp na dzień</a>
+        <a data-product="13203" class="btn-ghost" href="#" style="margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 54px; border: 1px solid #2A3540; border-radius: 12px; color: #F2F4F5; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 0.04em">Kup dostęp na dzień</a>
       </div>
       <!-- Week -->
       <div style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 22px; margin-top: 24px">
@@ -471,10 +465,9 @@ details[open]{border-color:#3A4651 !important}
         <div style="display: flex; flex-direction: column; gap: 12px; font-size: 16px; color: #C4CDD4">
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Wszystkie funkcje</span>
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Aktualizacje po patchach</span>
-          <span style="display: flex; gap: 10px; color: #5A6670"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5A6670" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>Bonusowy pakiet configów</span>
           <span style="display: flex; gap: 10px; color: #5A6670"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5A6670" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>Priorytetowe wsparcie</span>
         </div>
-        <a data-product="13202" class="btn-ghost" href="#" style="margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 54px; border: 1px solid #2A3540; border-radius: 12px; color: #F2F4F5; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 0.04em">Kup dostęp na tydzień</a>
+        <a data-product="13202" class="btn-ghost" href="#" style="margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 54px; border: 1px solid #2A3540; border-radius: 12px; color: #F2F4F5; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 0.04em">Kup dostęp na tydzień</a>
       </div>
       <!-- Month (hero plan) -->
       <div style="position: relative; background: linear-gradient(180deg, #1A1C0E 0%, #0F151C 60%); border: 2px solid #FFE418; border-radius: 18px; padding: 40px 32px 32px; display: flex; flex-direction: column; gap: 22px; box-shadow: 0 40px 90px rgba(255,228,24,0.16)">
@@ -484,12 +477,13 @@ details[open]{border-color:#3A4651 !important}
         <div style="display: flex; flex-direction: column; gap: 12px; font-size: 16px; color: #E1E6EA">
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Wszystkie funkcje</span>
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Priorytetowe aktualizacje</span>
-          <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg><span>Bonusowy pakiet configów <strong>gratis</strong></span></span>
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Priorytetowe wsparcie + ranga premium na Discordzie</span>
         </div>
-        <a data-product="13201" class="btn-primary shine" href="#" style="margin-top: auto; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 60px; background-color: #FFE418; border-radius: 12px; color: #0B1015; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: inset 0 -3px 0 rgba(0,0,0,0.18)">Zgarnij ofertę<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a data-product="13201" class="btn-primary shine" href="#" style="margin-top: auto; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 60px; background-color: #FFE418; border-radius: 12px; color: #0B1015; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: inset 0 -3px 0 rgba(0,0,0,0.18)">Zgarnij ofertę<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
       </div>
     </div>
+
+    <p style="margin: 0; align-self: center; max-width: 760px; text-align: center; color: #9AA6B0; font-size: 14px; line-height: 1.6">Klucze są cyfrowe, więc sprzedaż jest ostateczna, z&nbsp;wyjątkiem Gwarancji Dead-Key dla klucza, który nie działa w&nbsp;chwili dostarczenia (zgłoś to w&nbsp;ciągu 48 godzin). Brak zwrotów za wykrycia, bany i&nbsp;przestoje po aktualizacjach gry. <a href="/pl/refund-policy/" style="font-weight: 700">Polityka zwrotów</a></p>
 
     <!-- Trust row -->
     <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 28px; color: #9AA6B0; font-size: 14px; font-weight: 600">
@@ -512,12 +506,11 @@ details[open]{border-color:#3A4651 !important}
         <h3 class="disp" style="margin: 0; font-size: 32px">Twój pakiet startowy</h3>
         <div style="display: flex; flex-direction: column">
           <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px dashed #26313B; font-size: 16px"><span>Pełny dostęp do GCS Ware na 30&nbsp;dni</span><span class="mono" style="color: #9AA6B0">11,99&nbsp;$</span></div>
-          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px dashed #26313B; font-size: 16px"><span>Bonus: pakiet configów od prosów</span><span class="mono" style="color: #9AA6B0">GRATIS</span></div>
-          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px dashed #26313B; font-size: 16px"><span>Bonus: priorytetowe wsparcie na Discordzie</span><span class="mono" style="color: #9AA6B0">GRATIS</span></div>
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px dashed #26313B; font-size: 16px"><span>Priorytetowe wsparcie na Discordzie</span><span class="mono" style="color: #9AA6B0">W cenie</span></div>
           <div style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0 0; font-size: 18px; font-weight: 700"><span>Łączna wartość</span><span class="mono" style="color: #9AA6B0; text-decoration: line-through">11,99&nbsp;$</span></div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-top: 6px"><span style="font-size: 18px; font-weight: 700; color: #FFE418">Dziś płacisz</span><span class="disp" style="font-size: 40px; color: #FFE418">9,99&nbsp;$</span></div>
         </div>
-        <a data-product="13201" class="btn-primary" href="#pricing" style="display: flex; align-items: center; justify-content: center; min-height: 58px; background: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.04em">Odbierz pakiet</a>
+        <a data-product="13201" class="btn-primary" href="#pricing" style="display: flex; align-items: center; justify-content: center; min-height: 58px; background: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.04em">Odbierz pakiet</a>
       </div>
     </div>
   </section>
@@ -532,7 +525,7 @@ details[open]{border-color:#3A4651 !important}
       <div style="display: flex; flex-direction: column; gap: 12px">
         <details open style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">Czym jest GCS Ware?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
-          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">GCS Ware to lekkie oprogramowanie do Counter-Strike 2 z&nbsp;przejrzystym menu w&nbsp;grze, configami w&nbsp;chmurze i&nbsp;aktualizacjami do 6&nbsp;godzin po każdym patchu CS2.</p>
+          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">GCS Ware to lekkie oprogramowanie do Counter-Strike 2 z&nbsp;przejrzystym menu w&nbsp;grze, configami w&nbsp;chmurze i&nbsp;aktualizacjami docelowo do 6&nbsp;godzin po każdym patchu CS2.</p>
         </details>
         <details style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">Jak szybko dostanę klucz?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
@@ -540,11 +533,11 @@ details[open]{border-color:#3A4651 !important}
         </details>
         <details style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">Co się dzieje, gdy wychodzi aktualizacja CS2?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
-          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">Poprawkę wypuszczamy w&nbsp;ciągu 6&nbsp;godzin od każdego patcha Valve. Loader aktualizuje się sam, a&nbsp;bieżący status znajdziesz na tej stronie i&nbsp;na Discordzie.</p>
+          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">Staramy się wypuścić poprawkę w&nbsp;ciągu 6&nbsp;godzin od każdego patcha Valve, ale nie gwarantujemy tego czasu, a&nbsp;do czasu poprawki GCS Ware może nie działać. Loader aktualizuje się sam, a&nbsp;informacje o&nbsp;statusie publikujemy na Discordzie.</p>
         </details>
         <details style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">Czy spadną mi FPS-y?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
-          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">Nie odczujesz różnicy. GCS Ware jest lekki, więc jeśli twój komputer płynnie uciąga CS2, z&nbsp;GCS Ware też da radę.</p>
+          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">Większość graczy nie odczuwa różnicy. GCS Ware jest lekki, ale wydajność może zależeć od twojego sprzętu i&nbsp;ustawień.</p>
         </details>
         <details style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">Czy to subskrypcja?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
@@ -552,18 +545,18 @@ details[open]{border-color:#3A4651 !important}
         </details>
         <details style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">Jakie są wymagania systemowe?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
-          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">[WYMAGANIA, np. Windows 10/11 64-bit, procesor Intel/AMD]</p>
+          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">Windows 10 lub 11 (64-bit) z&nbsp;procesorem Intel lub AMD. Nic więcej nie potrzeba, ale maszyny wirtualne nie są obsługiwane.</p>
         </details>
         <details style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">Czy mogę dostać zwrot?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
-          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">Gwarancja Dead-Key obejmuje klucz, który nie działa w&nbsp;chwili dostarczenia. Każda inna sprzedaż jest ostateczna. Szczegóły znajdziesz w&nbsp;<a href="/refund-policy/" hreflang="en" style="font-weight: 700">Refund Policy</a> (po angielsku).</p>
+          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">Gwarancja Dead-Key obejmuje klucz, który nie działa w&nbsp;chwili dostarczenia. Każda inna sprzedaż jest ostateczna. Szczegóły znajdziesz w&nbsp;naszej <a href="/pl/refund-policy/" style="font-weight: 700">Polityce zwrotów</a>.</p>
         </details>
         <details style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">Jakie metody płatności akceptujecie?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
           <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">Karty Visa i&nbsp;Mastercard, Google Pay oraz BLIK.</p>
         </details>
       </div>
-      <p style="margin: 0; text-align: center; color: #9AA6B0; font-size: 16px">Nadal masz wątpliwości? <a href="#" style="font-weight: 700">Napisz do nas na Discordzie</a>. Odpowiadamy od razu, maks. w&nbsp;godzinę.</p>
+      <p style="margin: 0; text-align: center; color: #9AA6B0; font-size: 16px">Nadal masz wątpliwości? <a href="https://discord.gcscheats.com" target="_blank" rel="noopener" style="font-weight: 700">Napisz do nas na Discordzie</a>. Odpowiadamy od razu, maks. w&nbsp;godzinę.</p>
     </div>
   </section>
 
@@ -574,10 +567,10 @@ details[open]{border-color:#3A4651 !important}
       <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(closest-side at 50% 0%, rgba(255,228,24,0.14), transparent)"></div>
       <img class="floaty" src="../assets/logo.png" alt="" aria-hidden="true" style="position: relative; width: 130px; height: 130px; object-fit: contain">
       <h2 class="sec-title disp" style="position: relative; margin: 0; font-size: 60px; line-height: 1">Twój fotel czeka.<br><span style="color: #FFE418">Zajmij go.</span></h2>
-      <p style="position: relative; margin: 0; font-size: 19px; color: #B5C0C8; max-width: 560px">Zniżka 17% kończy się za <span class="mono" style="color: #F2F4F5; font-weight: 700"><span data-cd="d">00</span>d <span data-cd="h">00</span>h <span data-cd="m">00</span>m <span data-cd="s">00</span>s</span>. Potem cena wraca do 11,99&nbsp;$/mies.</p>
+      <p data-sale hidden style="position: relative; margin: 0; font-size: 19px; color: #B5C0C8; max-width: 560px">Zniżka 17% kończy się za <span class="mono" style="color: #F2F4F5; font-weight: 700"><span data-cd="d">--</span>d <span data-cd="h">--</span>h <span data-cd="m">--</span>m <span data-cd="s">--</span>s</span>. Potem cena wraca do 11,99&nbsp;$ za 30&nbsp;dni.</p>
       <div style="position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px">
-        <a class="btn-primary shine" href="#pricing" style="display: inline-flex; align-items: center; gap: 12px; min-height: 66px; padding: 0 38px; background-color: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 20px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: 0 14px 40px rgba(255,228,24,0.35)">Kup GCS Ware teraz<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-        <a class="btn-ghost" href="#" style="display: inline-flex; align-items: center; gap: 10px; min-height: 66px; padding: 0 26px; border: 1px solid #2A3540; border-radius: 12px; color: #F2F4F5; text-decoration: none; font-weight: 600; font-size: 17px">Dołącz do 7000+ graczy na Discordzie</a>
+        <a class="btn-primary shine" href="#pricing" style="display: inline-flex; align-items: center; gap: 12px; min-height: 66px; padding: 0 38px; background-color: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 20px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: 0 14px 40px rgba(255,228,24,0.35)">Kup GCS Ware teraz<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a class="btn-ghost" href="https://discord.gcscheats.com" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; min-height: 66px; padding: 0 26px; border: 1px solid #2A3540; border-radius: 12px; color: #F2F4F5; text-decoration: none; font-weight: 600; font-size: 17px">Dołącz do 7000+ graczy na Discordzie</a>
       </div>
       <span style="position: relative; color: #9AA6B0; font-size: 14px">Klucz od ręki · Bez subskrypcji</span>
     </div>
@@ -590,7 +583,7 @@ details[open]{border-color:#3A4651 !important}
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px">
         <div style="display: flex; flex-direction: column; gap: 14px; max-width: 460px">
           <span style="display: flex; align-items: center; gap: 10px"><img src="../assets/logo.png" alt="" aria-hidden="true" style="width: 36px; height: 36px; object-fit: contain"><span class="disp" style="font-size: 20px">GCS<span style="color: #FFE418">WARE</span></span></span>
-          <p style="margin: 0; color: #6E7A84; font-size: 14px; line-height: 1.7">GCS Ware to oprogramowanie do Counter-Strike 2 dla graczy, którzy chcą przejrzystego menu w&nbsp;grze, configów w&nbsp;chmurze i&nbsp;aktualizacji do 6&nbsp;godzin po każdym patchu CS2. Klucz od ręki, wsparcie 24/7 na Discordzie, dostęp na dzień, tydzień lub miesiąc.</p>
+          <p style="margin: 0; color: #6E7A84; font-size: 14px; line-height: 1.7">GCS Ware to oprogramowanie do Counter-Strike 2 dla graczy, którzy chcą przejrzystego menu w&nbsp;grze, configów w&nbsp;chmurze i&nbsp;aktualizacji docelowo do 6&nbsp;godzin po każdym patchu CS2. Klucz od ręki, wsparcie 24/7 na Discordzie, dostęp na dzień, tydzień lub miesiąc.</p>
         </div>
         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
           <span class="mono" style="color: #6E7A84; font-size: 12px">PRODUKT</span>
@@ -598,7 +591,7 @@ details[open]{border-color:#3A4651 !important}
         </div>
         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
           <span class="mono" style="color: #6E7A84; font-size: 12px">POMOC</span>
-          <a class="navlink" href="#faq">FAQ</a><a class="navlink" href="#">Discord</a><a class="navlink" href="#">Kontakt</a><a class="navlink" href="/refund-policy/">Zwroty</a>
+          <a class="navlink" href="#faq">FAQ</a><a class="navlink" href="https://discord.gcscheats.com" target="_blank" rel="noopener">Discord</a><a class="navlink" href="https://gcscheats.com/contact/">Kontakt</a><a class="navlink" href="/pl/refund-policy/">Zwroty</a>
         </div>
         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
           <span class="mono" style="color: #6E7A84; font-size: 12px">INFORMACJE PRAWNE</span>
@@ -609,35 +602,41 @@ details[open]{border-color:#3A4651 !important}
     </div>
   </footer>
 
-  <!-- Recent purchase toast (wire to real orders) -->
-  <div class="toast" role="status" style="position: fixed; left: 20px; bottom: 96px; z-index: 25; align-items: center; gap: 12px; padding: 12px 16px; background: #111820; border: 1px solid #2A3540; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); max-width: 320px">
+  <!-- Recent purchase toast: filled from real store orders by the script at the bottom -->
+  <div class="toast" role="status" hidden style="position: fixed; left: 20px; bottom: 96px; z-index: 25; align-items: center; gap: 12px; padding: 12px 16px; background: #111820; border: 1px solid #2A3540; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); max-width: 320px">
     <img src="../assets/logo.png" alt="" aria-hidden="true" style="width: 36px; height: 36px; object-fit: contain">
-    <span style="display: flex; flex-direction: column; font-size: 14px"><strong>[Imię] ([Kraj])</strong><span style="color: #9AA6B0">zakup: dostęp na miesiąc · [X] min temu</span></span>
+    <span style="display: flex; flex-direction: column; font-size: 14px"><strong data-toast-title></strong><span data-toast-time style="color: #9AA6B0"></span></span>
   </div>
 
   <!-- Sticky desktop bar -->
-  <div class="desk-bar" style="position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 25; display: flex; align-items: center; gap: 18px; padding: 10px 10px 10px 22px; background: rgba(17,24,32,0.95); backdrop-filter: blur(10px); border: 1px solid #2A3540; border-radius: 14px; box-shadow: 0 20px 50px rgba(0,0,0,0.6)">
-    <span style="font-size: 15px; color: #C4CDD4"><strong style="color: #F2F4F5">17% taniej</strong> jeszcze przez <span class="mono" style="color: #FFE418; font-weight: 700"><span data-cd="h">00</span>:<span data-cd="m">00</span>:<span data-cd="s">00</span></span></span>
-    <a class="btn-primary" href="#pricing" style="display: inline-flex; align-items: center; min-height: 46px; padding: 0 22px; background: #FFE418; color: #0B1015; border-radius: 10px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 15px; text-transform: uppercase">Zgarnij</a>
+  <div class="desk-bar" data-sale hidden style="position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 25; display: flex; align-items: center; gap: 18px; padding: 10px 10px 10px 22px; background: rgba(17,24,32,0.95); backdrop-filter: blur(10px); border: 1px solid #2A3540; border-radius: 14px; box-shadow: 0 20px 50px rgba(0,0,0,0.6)">
+    <span style="font-size: 15px; color: #C4CDD4"><strong style="color: #F2F4F5">17% taniej</strong> jeszcze przez <span class="mono" style="color: #FFE418; font-weight: 700"><span data-cd="d">--</span>d <span data-cd="h">--</span>:<span data-cd="m">--</span>:<span data-cd="s">--</span></span></span>
+    <a class="btn-primary" href="#pricing" style="display: inline-flex; align-items: center; min-height: 46px; padding: 0 22px; background: #FFE418; color: #0B1015; border-radius: 10px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 15px; text-transform: uppercase">Zgarnij</a>
   </div>
 
   <!-- Sticky mobile CTA -->
   <div class="mobile-cta" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; padding: 12px 16px; background: rgba(8,12,16,0.96); border-top: 1px solid #26313B; align-items: center; justify-content: space-between; gap: 12px">
-    <span style="display: flex; flex-direction: column; font-size: 13px; color: #9AA6B0"><span>-17% · kończy się za <span class="mono" style="color: #FFE418"><span data-cd="h">00</span>:<span data-cd="m">00</span>:<span data-cd="s">00</span></span></span><strong class="disp" style="font-size: 18px; color: #F2F4F5">Już od 1,99&nbsp;$</strong></span>
-    <a class="btn-primary" href="#pricing" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #FFE418; color: #0B1015; border-radius: 10px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase">Kup dostęp</a>
+    <span style="display: flex; flex-direction: column; font-size: 13px; color: #9AA6B0"><span data-sale hidden>-17% · kończy się za <span class="mono" style="color: #FFE418; white-space: nowrap"><span data-cd="d">--</span>d <span data-cd="h">--</span>:<span data-cd="m">--</span>:<span data-cd="s">--</span></span></span><strong class="disp" style="font-size: 18px; color: #F2F4F5">Już od 1,99&nbsp;$</strong></span>
+    <a class="btn-primary" href="#pricing" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #FFE418; color: #0B1015; border-radius: 10px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; white-space: nowrap">Kup dostęp</a>
   </div>
 </div>
 
 <script>
   // Sale countdown - change SALE_ENDS to move the deadline (local time).
+  // Everything marked data-sale stays hidden unless the sale is running, so crawlers and
+  // visitors after the deadline never see a timer stuck at zero.
   const SALE_ENDS = '2026-10-31T23:59:00';
 
   (function () {
     const end = new Date(SALE_ENDS).getTime();
     const els = document.querySelectorAll('[data-cd]');
+    const sale = document.querySelectorAll('[data-sale]');
     const pad = (n) => String(n).padStart(2, '0');
     function tick() {
-      const left = Math.max(0, Math.floor(((isNaN(end) ? 0 : end) - Date.now()) / 1000));
+      const left = Math.floor((end - Date.now()) / 1000);
+      const live = left > 0; // false after the deadline, or if SALE_ENDS is not a valid date
+      sale.forEach((el) => { el.hidden = !live; });
+      if (!live) return false;
       const cd = {
         d: pad(Math.floor(left / 86400)),
         h: pad(Math.floor((left % 86400) / 3600)),
@@ -645,61 +644,30 @@ details[open]{border-color:#3A4651 !important}
         s: pad(left % 60)
       };
       els.forEach((el) => { el.textContent = cd[el.dataset.cd]; });
+      return true;
     }
-    tick();
-    setInterval(tick, 1000);
+    if (tick()) {
+      const timer = setInterval(() => { if (!tick()) clearInterval(timer); }, 1000);
+    }
   })();
 
-  // Demo videos (YouTube IDs) - swap the IDs/lengths here when you upload new versions.
-  const DEMO_VIDEOS = {
-    en: { id: 'uFCTG4RHhRM', len: '1:08', label: 'Demo GCS Ware (po angielsku)' },
-    pl: { id: 'fp7E_L3bci4', len: '8:59', label: 'Prezentacja GCS Ware (po polsku)' }
-  };
-
+  // Demo video: the poster above links to it. To swap the video, change the poster's link, length
+  // and thumbnail. The thumbnail is self-hosted so the page doesn't contact Google until someone
+  // presses play: save the new one from https://i.ytimg.com/vi_webp/<ID>/maxresdefault.webp.
   (function () {
     const player = document.getElementById('demo-player');
-    const buttons = document.querySelectorAll('.lang-switch [data-lang]');
-    let lang = 'pl';
-    let playing = false;
-
-    function render() {
-      const v = DEMO_VIDEOS[lang];
-      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
-      player.textContent = '';
-
-      if (playing) {
-        // Real YouTube player - only loaded after the first click.
-        const f = document.createElement('iframe');
-        f.src = 'https://www.youtube-nocookie.com/embed/' + v.id + '?autoplay=1&rel=0&playsinline=1';
-        f.title = v.label;
-        f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-        f.referrerPolicy = 'strict-origin-when-cross-origin';
-        f.allowFullscreen = true;
-        player.appendChild(f);
-        return;
-      }
-
-      // Lightweight poster: thumbnail + play button (links to YouTube if JS is off).
-      const a = document.createElement('a');
-      a.className = 'yt-poster';
-      a.href = 'https://www.youtube.com/watch?v=' + v.id;
-      a.target = '_blank';
-      a.rel = 'noopener';
-      a.setAttribute('aria-label', 'Odtwórz: ' + v.label);
-      a.innerHTML =
-        '<img src="https://i.ytimg.com/vi/' + v.id + '/maxresdefault.jpg" alt="" loading="lazy">' +
-        '<span class="yt-play"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="#0B1015"><path d="M7 4v16l13-8z"></path></svg></span>' +
-        '<span class="yt-len mono">' + v.len + '</span>';
-      a.addEventListener('click', (e) => { e.preventDefault(); playing = true; render(); });
-      player.appendChild(a);
-    }
-
-    buttons.forEach((b) => b.addEventListener('click', () => {
-      if (b.dataset.lang === lang) return;
-      lang = b.dataset.lang;
-      render(); // if a video is already playing, the other language starts playing too
-    }));
-    render();
+    const poster = player.querySelector('.yt-poster');
+    poster.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Real YouTube player - only loaded after the click (the poster links to YouTube if JS is off).
+      const f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + new URL(poster.href).searchParams.get('v') + '?autoplay=1&rel=0&playsinline=1';
+      f.title = poster.getAttribute('aria-label').replace(/^[^:]*:\s*/, '');
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      f.allowFullscreen = true;
+      player.replaceChildren(f);
+    });
   })();
   // Checkout - buttons with data-product open Stripe via the store API (1 day 13203, 1 week 13202, 1 month 13201).
   const PAYMENT_API = 'https://gcscheats.com/api/payment';
@@ -754,6 +722,45 @@ details[open]{border-color:#3A4651 !important}
 
     // Coming back from Stripe with the Back button restores the page as it was - un-stick the buttons.
     window.addEventListener('pageshow', (e) => { if (e.persisted) buttons.forEach(reset); });
+  })();
+  // Recent purchase toast: the store's real latest order per plan (the API only says how long ago).
+  const RECENT_ORDERS_API = 'https://gcscheats.com/api/recent-orders';
+  const TOAST_TEXT = {
+    13203: 'Ktoś kupił dostęp na dzień',
+    13202: 'Ktoś kupił dostęp na tydzień',
+    13201: 'Ktoś kupił dostęp na miesiąc',
+    ago: (m) => m < 60 ? m + ' min temu' : m < 1440 ? Math.floor(m / 60) + ' godz. temu' : Math.floor(m / 1440) === 1 ? '1 dzień temu' : Math.floor(m / 1440) + ' dni temu'
+  };
+
+  (function () {
+    const toast = document.querySelector('.toast');
+    if (!toast || window.matchMedia('(max-width: 900px)').matches) return;
+    const title = toast.querySelector('[data-toast-title]');
+    const time = toast.querySelector('[data-toast-time]');
+    const MAX_AGE_MIN = 7 * 24 * 60;
+    const requests = [13201, 13202, 13203].map((id) =>
+      fetch(RECENT_ORDERS_API + '?product_id=' + id)
+        .then((r) => (r.ok ? r.json() : []))
+        .then((list) => (Array.isArray(list) ? list : []).map((o) => ({ id, minutes: Number(o.minutesAgo) })))
+        .catch(() => []));
+
+    Promise.all(requests).then((lists) => {
+      const orders = lists.flat()
+        .filter((o) => Number.isFinite(o.minutes) && o.minutes >= 0 && o.minutes <= MAX_AGE_MIN)
+        .sort((a, b) => a.minutes - b.minutes);
+      if (!orders.length) return;
+      const loadedAt = Date.now();
+      let i = 0;
+      function next() {
+        if (i >= orders.length) { toast.hidden = true; return; }
+        const o = orders[i++];
+        title.textContent = TOAST_TEXT[o.id];
+        time.textContent = TOAST_TEXT.ago(Math.max(1, o.minutes + Math.floor((Date.now() - loadedAt) / 60000)));
+        toast.hidden = false;
+        setTimeout(next, 8000);
+      }
+      setTimeout(next, 4000);
+    });
   })();
 </script>
 </body>

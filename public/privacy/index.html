@@ -7,15 +7,12 @@
 <meta name="description" content="How GCS Cheats handles data: no analytics or ad trackers on the site, what is collected at checkout and license activation, and how to reach us about your data.">
 <link rel="canonical" href="https://gcscheats.com/privacy/">
 <link rel="icon" type="image/png" href="/assets/logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#080C10}
 a{color:#FFE418}a:hover{color:#FFBF00}
-.disp{font-family:'Chakra Petch',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-0.01em}
-.mono{font-family:'JetBrains Mono',monospace}
-.eyebrow{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.18em;display:inline-flex;align-items:center;gap:10px}
+.disp{font-family:system-ui, sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-0.01em}
+.mono{font-family:ui-monospace, monospace}
+.eyebrow{font-family:ui-monospace, monospace;font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.18em;display:inline-flex;align-items:center;gap:10px}
 .eyebrow:before{content:"";width:22px;height:2px;background:currentColor}
 .grid-bg{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:56px 56px}
 .stripes{background-image:repeating-linear-gradient(-28deg,transparent 0 46px,rgba(255,228,24,.06) 46px 92px)}
@@ -65,12 +62,12 @@ details[open]{border-color:#3A4651 !important}
 .gm-box{width:82px;height:20px;box-sizing:border-box;border:1px solid #333;border-radius:5px;background:#141414;color:#E6E6E6;font-size:12px;display:flex;align-items:center;justify-content:center}
 .gm-dd{display:flex;align-items:center;justify-content:space-between;height:24px;padding:0 10px;border:1px solid #333;border-radius:6px;background:#242424;color:#E6E6E6;font-size:12.5px}
 .lang-switch{display:inline-flex;gap:4px;padding:4px;background:#0F151C;border:1px solid #26313B;border-radius:10px}
-.lang-switch button{min-height:40px;padding:0 18px;border:0;border-radius:7px;background:transparent;color:#9AA6B0;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s}
+.lang-switch button{min-height:40px;padding:0 18px;border:0;border-radius:7px;background:transparent;color:#9AA6B0;font-family:system-ui, sans-serif;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s}
 .lang-switch button:hover{color:#F2F4F5}
 .lang-switch button[aria-pressed="true"]{background:#FFE418;color:#0B1015}
 .lang-switch button:focus-visible,.yt-poster:focus-visible{outline:2px solid #FFE418;outline-offset:3px}
 .site-lang{display:inline-flex;gap:2px;padding:3px;background:#0F151C;border:1px solid #2A3540;border-radius:9px}
-.site-lang a{display:inline-flex;align-items:center;justify-content:center;min-width:38px;min-height:36px;padding:0 6px;box-sizing:border-box;border-radius:6px;color:#9AA6B0;text-decoration:none;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em}
+.site-lang a{display:inline-flex;align-items:center;justify-content:center;min-width:38px;min-height:36px;padding:0 6px;box-sizing:border-box;border-radius:6px;color:#9AA6B0;text-decoration:none;font-family:system-ui, sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em}
 .site-lang a:hover{color:#F2F4F5}
 .site-lang a[aria-current]{background:#26313B;color:#F2F4F5}
 .site-lang a:focus-visible{outline:2px solid #FFE418;outline-offset:2px}
@@ -97,16 +94,16 @@ main.terms{display:block;max-width:1240px;margin:0 auto;padding:56px 24px 104px;
 main.terms [id]{scroll-margin-top:96px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .terms-hero{max-width:860px;display:flex;flex-direction:column;gap:16px;margin-bottom:40px}
-.terms-badge{margin:0;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.18em;color:#FFE418}
-.terms-hero h1{margin:0;font-family:'Chakra Petch',sans-serif;font-weight:700;text-transform:uppercase;font-size:56px;line-height:1.02;color:#F2F4F5}
+.terms-badge{margin:0;font-family:ui-monospace, monospace;font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.18em;color:#FFE418}
+.terms-hero h1{margin:0;font-family:system-ui, sans-serif;font-weight:700;text-transform:uppercase;font-size:56px;line-height:1.02;color:#F2F4F5}
 .terms-intro{margin:0;font-size:19px;line-height:1.6;color:#B5C0C8}
 .terms-meta{display:flex;flex-wrap:wrap;gap:8px}
-.terms-meta span{font-family:'JetBrains Mono',monospace;font-size:13px;color:#9AA6B0;padding:6px 10px;border:1px solid #26313B;border-radius:8px}
+.terms-meta span{font-family:ui-monospace, monospace;font-size:13px;color:#9AA6B0;padding:6px 10px;border:1px solid #26313B;border-radius:8px}
 .terms-callout{background:#0F151C;border:1px solid #2A3540;border-left:3px solid #FFE418;border-radius:12px;padding:18px 20px;margin:0 0 14px;color:#E1E6EA}
 .terms-callout--warn{border-left-color:#FF8A7A;background:rgba(255,90,70,.06)}
 .terms-callout p{margin:0;line-height:1.65}
 .terms-plain-summary{max-width:920px;background:#0F151C;border:1px solid #26313B;border-radius:18px;padding:32px;margin-bottom:48px}
-.terms-plain-summary h2{display:flex;align-items:center;gap:10px;margin:0 0 10px;font-family:'Chakra Petch',sans-serif;font-weight:700;text-transform:uppercase;font-size:24px;color:#F2F4F5}
+.terms-plain-summary h2{display:flex;align-items:center;gap:10px;margin:0 0 10px;font-family:system-ui, sans-serif;font-weight:700;text-transform:uppercase;font-size:24px;color:#F2F4F5}
 .terms-plain-summary h2 svg{width:22px;height:22px;flex-shrink:0;color:#FFE418}
 .terms-plain-lead{margin:0 0 18px;line-height:1.6;color:#9AA6B0}
 .terms-plain-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
@@ -118,16 +115,16 @@ main.terms [id]{scroll-margin-top:96px}
 .terms-layout{display:grid;grid-template-columns:290px minmax(0,1fr);gap:40px;align-items:start}
 .terms-toc-wrap{position:sticky;top:92px;max-height:calc(100vh - 112px);overflow:auto}
 .terms-toc-details{background:#0F151C;border:1px solid #1F2A33;border-radius:14px;padding:12px}
-.terms-toc-details summary{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:6px 8px;font-family:'Chakra Petch',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#F2F4F5}
-.terms-toc-count{font-family:'JetBrains Mono',monospace;font-size:12px;color:#9AA6B0}
+.terms-toc-details summary{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:6px 8px;font-family:system-ui, sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#F2F4F5}
+.terms-toc-count{font-family:ui-monospace, monospace;font-size:12px;color:#9AA6B0}
 .terms-toc-list{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:2px}
 .terms-toc-list a{display:flex;gap:10px;padding:7px 8px;border-radius:8px;color:#C4CDD4;text-decoration:none;font-size:14px;line-height:1.35}
 .terms-toc-list a:hover{background:#151D26;color:#FFE418}
-.terms-toc-num{flex-shrink:0;padding-top:1px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#FFE418}
+.terms-toc-num{flex-shrink:0;padding-top:1px;font-family:ui-monospace, monospace;font-size:12px;color:#FFE418}
 .terms-content{display:flex;flex-direction:column;gap:16px;min-width:0}
 .terms-section{background:#0F151C;border:1px solid #1F2A33;border-radius:16px;padding:28px 30px}
-.terms-section h2{display:flex;align-items:baseline;gap:12px;margin:0 0 14px;font-family:'Chakra Petch',sans-serif;font-weight:700;text-transform:uppercase;font-size:22px;line-height:1.2;color:#F2F4F5}
-.terms-num{flex-shrink:0;font-family:'JetBrains Mono',monospace;font-size:14px;color:#FFE418}
+.terms-section h2{display:flex;align-items:baseline;gap:12px;margin:0 0 14px;font-family:system-ui, sans-serif;font-weight:700;text-transform:uppercase;font-size:22px;line-height:1.2;color:#F2F4F5}
+.terms-num{flex-shrink:0;font-family:ui-monospace, monospace;font-size:14px;color:#FFE418}
 .terms-section p{margin:0 0 14px;line-height:1.7}
 .terms-section ul,.terms-section ol{margin:0 0 14px;padding-left:22px;line-height:1.7}
 .terms-section li{margin:6px 0}
@@ -135,13 +132,13 @@ main.terms [id]{scroll-margin-top:96px}
 .terms-caps{font-size:14px}
 .terms-contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:0 0 14px}
 .terms-contact-item{display:flex;flex-direction:column;gap:4px;padding:14px 16px;border:1px solid #26313B;border-radius:12px;background:#0B1015}
-.terms-contact-label{font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#9AA6B0}
+.terms-contact-label{font-family:ui-monospace, monospace;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#9AA6B0}
 .terms-contact-note{font-size:14px}
 @media (max-width:900px){.terms-layout{grid-template-columns:1fr}.terms-toc-wrap{position:static;max-height:none}.terms-hero h1{font-size:38px}.terms-section{padding:22px 20px}.terms-plain-summary{padding:24px 20px}}
 </style>
 </head>
 <body>
-<div style="font-family: 'Barlow', sans-serif; color: #F2F4F5; background: #080C10; min-height: 100vh; overflow-x: hidden; overflow-x: clip">
+<div style="font-family: system-ui, sans-serif; color: #F2F4F5; background: #080C10; min-height: 100vh; overflow-x: hidden; overflow-x: clip">
 
   <!-- Nav -->
   <nav aria-label="Main" style="position: sticky; top: 0; z-index: 30; background: rgba(8,12,16,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #1A232B">
@@ -160,12 +157,12 @@ main.terms [id]{scroll-margin-top:96px}
       <div style="display: flex; gap: 12px; align-items: center">
         <div class="site-lang" role="group" aria-label="Language"><a href="/" lang="en" title="English">EN</a><a href="/pl/" hreflang="pl" lang="pl" title="Polski">PL</a></div>
         <a class="btn-ghost nav-login" href="#" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid #2A3540; border-radius: 8px; color: #F2F4F5; text-decoration: none; font-weight: 600; font-size: 15px">Log in</a>
-        <a class="btn-primary nav-cta" href="/#pricing" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; background: #FFE418; color: #0B1015; border-radius: 8px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 0.04em">Get access <span style="background: #0B1015; color: #FFE418; font-size: 12px; padding: 2px 6px; border-radius: 4px">-17%</span></a>
+        <a class="btn-primary nav-cta" href="/#pricing" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; background: #FFE418; color: #0B1015; border-radius: 8px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 0.04em">Get access <span style="background: #0B1015; color: #FFE418; font-size: 12px; padding: 2px 6px; border-radius: 4px">-17%</span></a>
       </div>
     </div>
   </nav>
 
-  <main class=terms id=main-content tabindex=-1><div class=terms-wrapper><div class=terms-hero><p class=terms-badge>Legal<h1>Privacy Policy</h1><p class=terms-intro>What this site and store collect about you, what they deliberately do not, and how to reach us about any of it. This page explains, in plain language, the data practices in Section 24 of the <a href=/terms/>Terms of Service</a>; if anything here reads differently, the Terms control.<div class=terms-meta><span>Last updated: <time datetime=2026-09-25>September 25, 2026</time></span><span>Version 1.1</span></div></div><div class=terms-content><article class=terms-section id=privacy-01><h2><span class=terms-num>01</span>What this website does not do</h2><p>The unusual part first. This website ships with:<ul><li><strong>No analytics and no trackers.</strong> There is no Google Analytics, no advertising pixel, no fingerprinting script, no session recording - nothing on any page phones home about your visit. The site's security policy blocks third-party scripts outright.<li><strong>No accounts.</strong> You cannot register here, so there is no profile of you to build. Checkout is guest-only.<li><strong>No third-party embeds.</strong> No external fonts, iframes or social widgets that would let another company watch you browse.</ul><p>Display preferences you set here (currency, text size, contrast and the other accessibility toggles) are saved in your browser's local storage, on your device. They never leave it, and you can clear them at any time through your browser settings.<p>The site is served through a hosting and security provider (Cloudflare), which processes connection data such as IP addresses as part of delivering and protecting any website it serves.</article><article class=terms-section id=privacy-02><h2><span class=terms-num>02</span>What is collected when you buy</h2><p>A purchase is the first moment we learn anything about you. As described in Terms Section 24, that can include: your email address (used to deliver your licence key and receipts), the order and its value, the licence key assigned to you, payment method metadata, and the IP address used at the time of purchase.<p>Depending on how you pay, you give that address on the payment processor's checkout page, which passes it to us with the payment confirmation, or on the order page you reach after paying. Either way it is used to send you your key.<p>Your card details go to the payment processor, not to us. We never see or store full card numbers.</article><article class=terms-section id=privacy-03><h2><span class=terms-num>03</span>What the software collects</h2><p>The products sold here enforce their licenses against your machine. At activation, the software can collect hardware identifiers (HWID, CPU ID, disk serials, MAC addresses) and activation logs. Per Terms Section 24, that data is used solely for license validation and fraud prevention, and it is not sold to third parties for marketing purposes.</article><article class=terms-section id=privacy-04><h2><span class=terms-num>04</span>Support conversations</h2><p>If you write to us by email or on Discord, the content of that conversation is retained for operational and legal purposes - mostly so we can actually resolve your issue and honor your license later.</article><article class=terms-section id=privacy-05><h2><span class=terms-num>05</span>When data is shared</h2><p>Data is disclosed to law enforcement, courts or regulators when required by law, or when we believe in good faith that disclosure is necessary to prevent fraud, enforce the Terms, or protect the rights, property or safety of GCS Cheats or others. That is the full list of sharing scenarios; there is no data-selling business here.</article><article class=terms-section id=privacy-06><h2><span class=terms-num>06</span>Security</h2><p>We apply reasonable technical and organizational measures to protect the data above. No measure is perfect: as the Terms put it, no transmission over the internet can be guaranteed absolutely secure.</article><article class=terms-section id=privacy-07><h2><span class=terms-num>07</span>Your choices and requests</h2><p>Questions about what we hold on an order of yours, or a request about that data, go to <a href=mailto:contact@gcscheats.com data-destination=email-recipient>contact@gcscheats.com</a> - a person reads that inbox. Local display preferences are yours to clear in the browser at any time. And the simplest privacy control on this site is built in: browsing it requires no account, no cookie banner theater, and no consent to tracking, because there is none.</article><article class=terms-section id=privacy-08><h2><span class=terms-num>08</span>Changes to this policy</h2><p>If practices change, this page changes with them, with a new date at the top. Substantive changes get a new version number; we do not silently rewrite history.</article></div></div></main>
+  <main class=terms id=main-content tabindex=-1><div class=terms-wrapper><div class=terms-hero><p class=terms-badge>Legal<h1>Privacy Policy</h1><p class=terms-intro>What this site and store collect about you, what they deliberately do not, and how to reach us about any of it. This page explains, in plain language, the data practices in Section 24 of the <a href=/terms/>Terms of Service</a>; if anything here reads differently, the Terms control.<div class=terms-meta><span>Last updated: <time datetime=2026-09-25>September 25, 2026</time></span><span>Version 1.1</span></div></div><div class=terms-content><article class=terms-section id=privacy-01><h2><span class=terms-num>01</span>What this website does not do</h2><p>The unusual part first. This website ships with:<ul><li><strong>No analytics and no trackers.</strong> There is no Google Analytics, no advertising pixel, no fingerprinting script, no session recording - nothing on any page phones home about your visit. The site's security policy blocks third-party scripts outright.<li><strong>No accounts.</strong> You cannot register here, so there is no profile of you to build. Checkout is guest-only.<li><strong>No third-party embeds, except the demo video.</strong> No external fonts, iframes or social widgets that would let another company watch you browse. On gcsware.com the one exception is the demo video: YouTube plays it in privacy-enhanced mode (youtube-nocookie.com). Nothing loads from YouTube until you press play, and from then on <a href=https://policies.google.com/privacy rel=noopener target=_blank>YouTube's privacy policy</a> applies to the video.</ul><p>Display preferences you set here (currency, text size, contrast and the other accessibility toggles) are saved in your browser's local storage, on your device. They never leave it, and you can clear them at any time through your browser settings.<p>The site is served through a hosting and security provider (Cloudflare), which processes connection data such as IP addresses as part of delivering and protecting any website it serves.</article><article class=terms-section id=privacy-02><h2><span class=terms-num>02</span>What is collected when you buy</h2><p>A purchase is the first moment we learn anything about you. As described in Terms Section 24, that can include: your email address (used to deliver your licence key and receipts), the order and its value, the licence key assigned to you, payment method metadata, and the IP address used at the time of purchase.<p>Depending on how you pay, you give that address on the payment processor's checkout page, which passes it to us with the payment confirmation, or on the order page you reach after paying. Either way it is used to send you your key.<p>Your card details go to the payment processor, not to us. We never see or store full card numbers.</article><article class=terms-section id=privacy-03><h2><span class=terms-num>03</span>What the software collects</h2><p>The products sold here enforce their licenses against your machine. At activation, the software can collect hardware identifiers (HWID, CPU ID, disk serials, MAC addresses) and activation logs. Per Terms Section 24, that data is used solely for license validation and fraud prevention, and it is not sold to third parties for marketing purposes.</article><article class=terms-section id=privacy-04><h2><span class=terms-num>04</span>Support conversations</h2><p>If you write to us by email or on Discord, the content of that conversation is retained for operational and legal purposes - mostly so we can actually resolve your issue and honor your license later.</article><article class=terms-section id=privacy-05><h2><span class=terms-num>05</span>When data is shared</h2><p>Data is disclosed to law enforcement, courts or regulators when required by law, or when we believe in good faith that disclosure is necessary to prevent fraud, enforce the Terms, or protect the rights, property or safety of GCS Cheats or others. That is the full list of sharing scenarios; there is no data-selling business here.</article><article class=terms-section id=privacy-06><h2><span class=terms-num>06</span>Security</h2><p>We apply reasonable technical and organizational measures to protect the data above. No measure is perfect: as the Terms put it, no transmission over the internet can be guaranteed absolutely secure.</article><article class=terms-section id=privacy-07><h2><span class=terms-num>07</span>Your choices and requests</h2><p>Questions about what we hold on an order of yours, or a request about that data, go to <a href=mailto:contact@gcscheats.com data-destination=email-recipient>contact@gcscheats.com</a> - a person reads that inbox. Local display preferences are yours to clear in the browser at any time. And the simplest privacy control on this site is built in: browsing it requires no account, no cookie banner theater, and no consent to tracking, because there is none.</article><article class=terms-section id=privacy-08><h2><span class=terms-num>08</span>Changes to this policy</h2><p>If practices change, this page changes with them, with a new date at the top. Substantive changes get a new version number; we do not silently rewrite history.</article></div></div></main>
 
   <!-- Footer -->
   <footer style="border-top: 1px solid #1A232B; padding-bottom: 96px">
@@ -173,7 +170,7 @@ main.terms [id]{scroll-margin-top:96px}
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px">
         <div style="display: flex; flex-direction: column; gap: 14px; max-width: 460px">
           <span style="display: flex; align-items: center; gap: 10px"><img src="/assets/logo.png" alt="" aria-hidden="true" style="width: 36px; height: 36px; object-fit: contain"><span class="disp" style="font-size: 20px">GCS<span style="color: #FFE418">WARE</span></span></span>
-          <p style="margin: 0; color: #6E7A84; font-size: 14px; line-height: 1.7">GCS Ware is CS2 software for Counter-Strike 2 players who want a clean in-game menu, cloud configs and updates within 6 hours of every CS2 patch. Instant key delivery, 24/7 Discord support, day, week or month plans.</p>
+          <p style="margin: 0; color: #6E7A84; font-size: 14px; line-height: 1.7">GCS Ware is CS2 software for Counter-Strike 2 players who want a clean in-game menu, cloud configs and a 6-hour update target after every CS2 patch. Instant key delivery, 24/7 Discord support, day, week or month plans.</p>
         </div>
         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
           <span class="mono" style="color: #6E7A84; font-size: 12px">PRODUCT</span>
@@ -181,7 +178,7 @@ main.terms [id]{scroll-margin-top:96px}
         </div>
         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
           <span class="mono" style="color: #6E7A84; font-size: 12px">SUPPORT</span>
-          <a class="navlink" href="/#faq">FAQ</a><a class="navlink" href="#">Discord</a><a class="navlink" href="#">Contact</a><a class="navlink" href="/refund-policy/">Refunds</a>
+          <a class="navlink" href="/#faq">FAQ</a><a class="navlink" href="https://discord.gcscheats.com" target="_blank" rel="noopener">Discord</a><a class="navlink" href="https://gcscheats.com/contact/">Contact</a><a class="navlink" href="/refund-policy/">Refunds</a>
         </div>
         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
           <span class="mono" style="color: #6E7A84; font-size: 12px">LEGAL</span>

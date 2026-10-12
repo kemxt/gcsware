@@ -4,17 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GCS Ware - CS2 Software, Updated Every Patch</title>
-<meta name="description" content="GCS Ware is lightweight CS2 software with a clean in-game menu, cloud configs and updates within 6 hours of every Valve patch. Instant delivery, 24/7 Discord support.">
+<meta name="description" content="GCS Ware is lightweight CS2 software with a clean in-game menu, cloud configs and a 6-hour update target after every Valve patch. Instant delivery, 24/7 Discord support.">
+<link rel="canonical" href="https://gcsware.com/">
+<link rel="alternate" hreflang="en" href="https://gcsware.com/">
+<link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/">
+<link rel="alternate" hreflang="x-default" href="https://gcsware.com/">
 <link rel="icon" type="image/png" href="assets/logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"GCS Ware","url":"https://gcsware.com/"}</script>
 <style>
 body{margin:0;background:#080C10}
 a{color:#FFE418}a:hover{color:#FFBF00}
-.disp{font-family:'Chakra Petch',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-0.01em}
-.mono{font-family:'JetBrains Mono',monospace}
-.eyebrow{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.18em;display:inline-flex;align-items:center;gap:10px}
+.disp{font-family:system-ui, sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-0.01em}
+.mono{font-family:ui-monospace, monospace}
+[hidden]{display:none !important}
+.eyebrow{font-family:ui-monospace, monospace;font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.18em;display:inline-flex;align-items:center;gap:10px}
 .eyebrow:before{content:"";width:22px;height:2px;background:currentColor}
 .grid-bg{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:56px 56px}
 .stripes{background-image:repeating-linear-gradient(-28deg,transparent 0 46px,rgba(255,228,24,.06) 46px 92px)}
@@ -44,6 +47,7 @@ details[open]{border-color:#3A4651 !important}
 .shine{background-image:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.45) 50%,transparent 65%);background-size:200% 100%;animation:shine 3.2s linear infinite}
 .mobile-cta{display:none}
 .toast{display:flex}
+.toast[hidden]{display:none}
 .gm-sec{font-size:11.5px;color:#8A8A8A;letter-spacing:.04em;padding:8px 14px 4px}
 .gm-item{display:flex;align-items:center;gap:9px;margin:2px 8px;padding:6px 10px;border-radius:7px;color:#C9C9C9;font-size:12.5px;border:1px solid transparent}
 .gm-item svg{color:#BDBDBD}
@@ -63,13 +67,9 @@ details[open]{border-color:#3A4651 !important}
 .gm-sl i{position:absolute;top:50%;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;background:#F2F2F2}
 .gm-box{width:82px;height:20px;box-sizing:border-box;border:1px solid #333;border-radius:5px;background:#141414;color:#E6E6E6;font-size:12px;display:flex;align-items:center;justify-content:center}
 .gm-dd{display:flex;align-items:center;justify-content:space-between;height:24px;padding:0 10px;border:1px solid #333;border-radius:6px;background:#242424;color:#E6E6E6;font-size:12.5px}
-.lang-switch{display:inline-flex;gap:4px;padding:4px;background:#0F151C;border:1px solid #26313B;border-radius:10px}
-.lang-switch button{min-height:40px;padding:0 18px;border:0;border-radius:7px;background:transparent;color:#9AA6B0;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s}
-.lang-switch button:hover{color:#F2F4F5}
-.lang-switch button[aria-pressed="true"]{background:#FFE418;color:#0B1015}
-.lang-switch button:focus-visible,.yt-poster:focus-visible{outline:2px solid #FFE418;outline-offset:3px}
+.yt-poster:focus-visible{outline:2px solid #FFE418;outline-offset:3px}
 .site-lang{display:inline-flex;gap:2px;padding:3px;background:#0F151C;border:1px solid #2A3540;border-radius:9px}
-.site-lang a{display:inline-flex;align-items:center;justify-content:center;min-width:38px;min-height:36px;padding:0 6px;box-sizing:border-box;border-radius:6px;color:#9AA6B0;text-decoration:none;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em}
+.site-lang a{display:inline-flex;align-items:center;justify-content:center;min-width:38px;min-height:36px;padding:0 6px;box-sizing:border-box;border-radius:6px;color:#9AA6B0;text-decoration:none;font-family:system-ui, sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em}
 .site-lang a:hover{color:#F2F4F5}
 .site-lang a[aria-current]{background:#26313B;color:#F2F4F5}
 .site-lang a:focus-visible{outline:2px solid #FFE418;outline-offset:2px}
@@ -94,7 +94,7 @@ details[open]{border-color:#3A4651 !important}
 </style>
 </head>
 <body>
-<div style="font-family: 'Barlow', sans-serif; color: #F2F4F5; background: #080C10; min-height: 100vh; overflow-x: hidden; overflow-x: clip">
+<div style="font-family: system-ui, sans-serif; color: #F2F4F5; background: #080C10; min-height: 100vh; overflow-x: hidden; overflow-x: clip">
 
   <!-- Nav -->
   <nav aria-label="Main" style="position: sticky; top: 0; z-index: 30; background: rgba(8,12,16,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #1A232B">
@@ -113,7 +113,7 @@ details[open]{border-color:#3A4651 !important}
       <div style="display: flex; gap: 12px; align-items: center">
         <div class="site-lang" role="group" aria-label="Language"><a href="./" aria-current="page" lang="en" title="English">EN</a><a href="pl/" hreflang="pl" lang="pl" title="Polski">PL</a></div>
         <a class="btn-ghost nav-login" href="#" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid #2A3540; border-radius: 8px; color: #F2F4F5; text-decoration: none; font-weight: 600; font-size: 15px">Log in</a>
-        <a class="btn-primary nav-cta" href="#pricing" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; background: #FFE418; color: #0B1015; border-radius: 8px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 0.04em">Get access <span style="background: #0B1015; color: #FFE418; font-size: 12px; padding: 2px 6px; border-radius: 4px">-17%</span></a>
+        <a class="btn-primary nav-cta" href="#pricing" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; background: #FFE418; color: #0B1015; border-radius: 8px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 0.04em">Get access <span style="background: #0B1015; color: #FFE418; font-size: 12px; padding: 2px 6px; border-radius: 4px">-17%</span></a>
       </div>
     </div>
   </nav>
@@ -132,13 +132,13 @@ details[open]{border-color:#3A4651 !important}
           </span>
           <span style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid #2A3540; background: rgba(17,24,32,0.8); border-radius: 999px; font-size: 14px; font-weight: 600; color: #C4CDD4">
             <span style="display: flex"><span style="width: 22px; height: 22px; border-radius: 50%; background: #3A4651; border: 2px solid #111820"></span><span style="width: 22px; height: 22px; border-radius: 50%; background: #4A5663; border: 2px solid #111820; margin-left: -8px"></span><span style="width: 22px; height: 22px; border-radius: 50%; background: #FFBF00; border: 2px solid #111820; margin-left: -8px"></span></span>
-            500+ players on GCS Ware
+            1,000+ players on GCS Ware
           </span>
         </div>
-        <h1 class="hero-title disp" style="margin: 0; font-size: 76px; line-height: 0.98">Stop losing.<br>Take the <span style="color: #0B1015; background: #FFE418; padding: 0 12px; display: inline-block; transform: skew(-8deg)"><span style="display: inline-block; transform: skew(8deg)">winner's seat.</span></span></h1>
-        <p style="margin: 0; font-size: 20px; line-height: 1.55; color: #B5C0C8; max-width: 560px">GCS Ware is the lightweight <strong style="color: #F2F4F5">CS2 software</strong> players switch to - and never leave. Clean in-game menu, one-click configs, no FPS tax, and <strong style="color: #F2F4F5">updated within 6 hours of every Valve patch.</strong></p>
+        <h1 class="hero-title disp" style="margin: 0; font-size: 76px; line-height: 0.98"><span class="eyebrow" style="display: flex; color: #FFE418; line-height: 1.4; margin-bottom: 18px">GCS Ware for CS2</span> Stop losing.<br>Take the <span style="color: #0B1015; background: #FFE418; padding: 0 12px; display: inline-block; transform: skew(-8deg)"><span style="display: inline-block; transform: skew(8deg)">winner's seat.</span></span></h1>
+        <p style="margin: 0; font-size: 20px; line-height: 1.55; color: #B5C0C8; max-width: 560px">GCS Ware is the lightweight <strong style="color: #F2F4F5">CS2 software</strong> players switch to - and never leave. Clean in-game menu, one-click configs, minimal FPS impact, and <strong style="color: #F2F4F5">a 6-hour update target after every Valve patch.</strong></p>
         <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
-          <a class="btn-primary shine" href="#pricing" style="display: inline-flex; align-items: center; gap: 12px; min-height: 64px; padding: 0 34px; background-color: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 20px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: 0 14px 40px rgba(255,228,24,0.35), inset 0 -3px 0 rgba(0,0,0,0.18)">
+          <a class="btn-primary shine" href="#pricing" style="display: inline-flex; align-items: center; gap: 12px; min-height: 64px; padding: 0 34px; background-color: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 20px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: 0 14px 40px rgba(255,228,24,0.35), inset 0 -3px 0 rgba(0,0,0,0.18)">
             Claim 17% off now
             <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
           </a>
@@ -161,7 +161,7 @@ details[open]{border-color:#3A4651 !important}
       <div style="flex: 0 1 680px; min-width: 0; position: relative; display: flex; justify-content: center; padding: 40px 0">
         <img class="floaty" src="assets/logo.png" alt="" aria-hidden="true" style="position: absolute; right: -40px; top: -30px; width: 150px; height: 150px; object-fit: contain; z-index: 3; filter: drop-shadow(0 24px 40px rgba(0,0,0,0.7))">
         <div class="menu-wrap" style="position: relative; z-index: 2">
-          <div class="gm hud" role="img" aria-label="GCS Ware CS2 External menu: Aimbot settings for pistols" style="width: 680px; height: 428px; display: flex; background: #121212; border: 1px solid #262626; border-radius: 10px; overflow: hidden; box-shadow: 0 50px 100px rgba(0,0,0,0.7), 0 0 0 8px rgba(255,255,255,0.02); font-family: 'Barlow', sans-serif; color: #E6E6E6; font-size: 12.5px; text-align: left">
+          <div class="gm hud" role="img" aria-label="GCS Ware CS2 External menu: Aimbot settings for pistols" style="width: 680px; height: 428px; display: flex; background: #121212; border: 1px solid #262626; border-radius: 10px; overflow: hidden; box-shadow: 0 50px 100px rgba(0,0,0,0.7), 0 0 0 8px rgba(255,255,255,0.02); font-family: system-ui, sans-serif; color: #E6E6E6; font-size: 12.5px; text-align: left">
             <!-- Sidebar -->
             <div style="width: 160px; flex-shrink: 0; background: #151515; border-right: 1px solid #222; display: flex; flex-direction: column">
               <div style="display: flex; align-items: flex-start; gap: 6px; padding: 10px 12px 8px">
@@ -233,11 +233,11 @@ details[open]{border-color:#3A4651 !important}
           <!-- floating chips -->
           <div style="position: absolute; left: -30px; bottom: -26px; background: #111820; border: 1px solid #2A3540; border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 3">
             <span style="width: 36px; height: 36px; border-radius: 8px; background: rgba(61,220,132,0.14); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3DDC84" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"></path><path d="M21 3v5h-5"></path></svg></span>
-            <span style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 14px">Updated within 6h</span><span class="mono" style="color: #9AA6B0; font-size: 12px">after every CS2 patch</span></span>
+            <span style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 14px">6h update target</span><span class="mono" style="color: #9AA6B0; font-size: 12px">after every CS2 patch</span></span>
           </div>
           <div style="position: absolute; right: -16px; bottom: -30px; background: #FFE418; color: #0B1015; border-radius: 12px; padding: 10px 16px; display: flex; flex-direction: column; box-shadow: 0 20px 40px rgba(0,0,0,0.5); transform: rotate(3deg); z-index: 3">
             <span class="mono" style="font-size: 11px; font-weight: 700">FPS IMPACT</span>
-            <span class="disp" style="font-size: 26px; line-height: 1">≈ 0</span>
+            <span class="disp" style="font-size: 26px; line-height: 1">Minimal</span>
           </div>
         </div>
       </div>
@@ -247,8 +247,8 @@ details[open]{border-color:#3A4651 !important}
   <!-- Marquee -->
   <div aria-hidden="true" style="background: #FFE418; color: #0B1015; overflow: hidden; border-bottom: 1px solid #0B1015; transform: rotate(-1deg); margin: -10px -20px 0; position: relative; z-index: 4">
     <div class="marquee disp" style="display: flex; gap: 40px; white-space: nowrap; padding: 14px 0; font-size: 20px; width: max-content">
-      <span>Instant delivery</span><span>✦</span><span>Same-day patch updates</span><span>✦</span><span>Zero FPS tax</span><span>✦</span><span>24/7 Discord support</span><span>✦</span><span>Cloud configs</span><span>✦</span><span>Plans from $1.99</span><span>✦</span>
-      <span>Instant delivery</span><span>✦</span><span>Same-day patch updates</span><span>✦</span><span>Zero FPS tax</span><span>✦</span><span>24/7 Discord support</span><span>✦</span><span>Cloud configs</span><span>✦</span><span>Plans from $1.99</span><span>✦</span>
+      <span>Instant delivery</span><span>✦</span><span>Same-day patch updates</span><span>✦</span><span>Minimal FPS impact</span><span>✦</span><span>24/7 Discord support</span><span>✦</span><span>Cloud configs</span><span>✦</span><span>Plans from $1.99</span><span>✦</span>
+      <span>Instant delivery</span><span>✦</span><span>Same-day patch updates</span><span>✦</span><span>Minimal FPS impact</span><span>✦</span><span>24/7 Discord support</span><span>✦</span><span>Cloud configs</span><span>✦</span><span>Plans from $1.99</span><span>✦</span>
     </div>
   </div>
 
@@ -256,8 +256,8 @@ details[open]{border-color:#3A4651 !important}
   <!-- Stats -->
   <section aria-label="GCS Ware in numbers" style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 24px">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: #1F2A33; border: 1px solid #1F2A33; border-radius: 16px; overflow: hidden">
-      <div style="background: #0D1319; padding: 28px; display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 44px; color: #FFE418; line-height: 1">500+</span><span style="color: #9AA6B0; font-size: 15px">players already on GCS Ware</span></div>
-      <div style="background: #0D1319; padding: 28px; display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 44px; color: #FFE418; line-height: 1">6h</span><span style="color: #9AA6B0; font-size: 15px">max. update time after a Valve patch</span></div>
+      <div style="background: #0D1319; padding: 28px; display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 44px; color: #FFE418; line-height: 1">1,000+</span><span style="color: #9AA6B0; font-size: 15px">players already on GCS Ware</span></div>
+      <div style="background: #0D1319; padding: 28px; display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 44px; color: #FFE418; line-height: 1">6h</span><span style="color: #9AA6B0; font-size: 15px">update target after a Valve patch</span></div>
       <div style="background: #0D1319; padding: 28px; display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 44px; color: #FFE418; line-height: 1">5 min</span><span style="color: #9AA6B0; font-size: 15px">from checkout to first match</span></div>
       <div style="background: #0D1319; padding: 28px; display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 44px; color: #FFE418; line-height: 1">70%</span><span style="color: #9AA6B0; font-size: 15px">of buyers come back for another license</span></div>
     </div>
@@ -272,11 +272,11 @@ details[open]{border-color:#3A4651 !important}
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
       <div class="card" style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column">
         <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; color: #FFB4A8; font-weight: 600; font-size: 17px; background: rgba(255,90,70,0.06)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M18 6 6 18M6 6l12 12"></path></svg><span style="text-decoration: line-through; text-decoration-color: rgba(255,180,168,0.5)">Valve pushes a patch - your tool is dead for a week.</span></div>
-        <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; font-weight: 600; font-size: 17px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 6 9 17l-5-5"></path></svg>GCS Ware ships the fix within 6 hours. Every time.</div>
+        <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; font-weight: 600; font-size: 17px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 6 9 17l-5-5"></path></svg>GCS Ware aims to ship the fix within 6 hours.</div>
       </div>
       <div class="card" style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column">
         <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; color: #FFB4A8; font-weight: 600; font-size: 17px; background: rgba(255,90,70,0.06)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M18 6 6 18M6 6l12 12"></path></svg><span style="text-decoration: line-through; text-decoration-color: rgba(255,180,168,0.5)">Bloated menus, stutters, FPS drops mid-clutch.</span></div>
-        <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; font-weight: 600; font-size: 17px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 6 9 17l-5-5"></path></svg>Built lean. Your frames stay exactly where they were.</div>
+        <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; font-weight: 600; font-size: 17px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 6 9 17l-5-5"></path></svg>Built lean, for minimal FPS impact.</div>
       </div>
       <div class="card" style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column">
         <div style="padding: 24px 26px; display: flex; gap: 12px; align-items: flex-start; color: #FFB4A8; font-weight: 600; font-size: 17px; background: rgba(255,90,70,0.06)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M18 6 6 18M6 6l12 12"></path></svg><span style="text-decoration: line-through; text-decoration-color: rgba(255,180,168,0.5)">Support tickets answered in 3 days. Maybe.</span></div>
@@ -285,21 +285,17 @@ details[open]{border-color:#3A4651 !important}
     </div>
   </section>
 
-  <!-- Demo video (English / Polski switch - video IDs live in DEMO_VIDEOS at the bottom) -->
+  <!-- Demo video: the poster links to the video; the script at the bottom swaps in the player on click -->
   <section id="demo" style="max-width: 1240px; margin: 0 auto; padding: 56px 24px; display: flex; flex-direction: column; gap: 24px">
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 24px">
       <div style="display: flex; flex-direction: column; gap: 14px">
         <span class="eyebrow" style="color: #FFE418">Demo</span>
         <h2 class="sec-title disp" style="margin: 0; font-size: 44px; line-height: 1.04">See it in-game</h2>
       </div>
-      <div class="lang-switch" role="group" aria-label="Video language">
-        <button type="button" data-lang="en" aria-pressed="true">English</button>
-        <button type="button" data-lang="pl" aria-pressed="false">Polski</button>
-      </div>
     </div>
     <div id="demo-player" class="hud yt-frame">
       <a class="yt-poster" href="https://www.youtube.com/watch?v=uFCTG4RHhRM" target="_blank" rel="noopener" aria-label="Play: GCS Ware demo (English)">
-        <img src="https://i.ytimg.com/vi/uFCTG4RHhRM/maxresdefault.jpg" alt="" loading="lazy">
+        <img src="assets/demo-en.webp" alt="" loading="lazy">
         <span class="yt-play"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="#0B1015"><path d="M7 4v16l13-8z"></path></svg></span>
         <span class="yt-len mono">1:08</span>
       </a>
@@ -313,7 +309,7 @@ details[open]{border-color:#3A4651 !important}
         <span class="eyebrow" style="color: #FFE418">CS2 software features</span>
         <h2 class="sec-title disp" style="margin: 0; font-size: 52px; line-height: 1.04">Everything you need. Nothing that slows you down.</h2>
       </div>
-      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B5C0C8; max-width: 380px">Works from the first launch - no file digging, no setup guides, no FPS tax.</p>
+      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B5C0C8; max-width: 380px">Works from the first launch - no file digging, no setup guides, minimal FPS impact.</p>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px">
       <article class="card wide-card" style="grid-column: span 2; min-width: 0; background: #0F151C; border: 1px solid #1F2A33; border-radius: 18px; padding: 32px; display: flex; flex-wrap: wrap; gap: 28px; align-items: center">
@@ -331,9 +327,9 @@ details[open]{border-color:#3A4651 !important}
       </article>
       <article class="card" style="min-width: 0; background: #FFE418; color: #0B1015; border: 1px solid #FFE418; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
         <span class="mono" style="font-size: 13px; font-weight: 700">02 / PERFORMANCE</span>
-        <h3 class="disp" style="margin: 0; font-size: 30px">Zero FPS tax</h3>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A10">Optimized native code with a tiny footprint. CS2 runs as smooth as before.</p>
-        <span class="disp" style="font-size: 64px; line-height: 1; margin-top: auto">≈0%</span>
+        <h3 class="disp" style="margin: 0; font-size: 30px">Minimal FPS impact</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2A2A10">Optimized native code with a tiny footprint, built to keep CS2 running smoothly.</p>
+        <span class="disp" style="font-size: 64px; line-height: 1; margin-top: auto">Lean</span>
       </article>
       <article class="card" style="min-width: 0; background: #0F151C; border: 1px solid #1F2A33; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
         <span class="mono" style="color: #FFE418; font-size: 13px">03 / MENU</span>
@@ -352,8 +348,8 @@ details[open]{border-color:#3A4651 !important}
       </article>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
-      <a class="btn-primary" href="#pricing" style="display: inline-flex; align-items: center; gap: 10px; min-height: 58px; padding: 0 32px; background: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: 0 12px 34px rgba(255,228,24,0.25)">Unlock every feature - 17% off</a>
-      <span style="color: #9AA6B0; font-size: 14px">Sale ends in <span class="mono" style="color: #F2F4F5"><span data-cd="d">00</span>d <span data-cd="h">00</span>h <span data-cd="m">00</span>m</span></span>
+      <a class="btn-primary" href="#pricing" style="display: inline-flex; align-items: center; gap: 10px; min-height: 58px; padding: 0 32px; background: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: 0 12px 34px rgba(255,228,24,0.25)">Unlock every feature - 17% off</a>
+      <span data-sale hidden style="color: #9AA6B0; font-size: 14px">Sale ends in <span class="mono" style="color: #F2F4F5"><span data-cd="d">--</span>d <span data-cd="h">--</span>h <span data-cd="m">--</span>m</span></span>
     </div>
   </section>
 
@@ -380,7 +376,7 @@ details[open]{border-color:#3A4651 !important}
         <a class="card" href="#pricing" style="text-decoration: none; color: #F2F4F5; background: #0F151C; border: 2px solid #FFE418; border-radius: 18px; padding: 30px; display: flex; flex-direction: column; gap: 12px">
           <span class="mono" style="color: #FFE418; font-size: 13px">THE GRINDER · MOST COMMON</span>
           <h3 class="disp" style="margin: 0; font-size: 24px">“I queue every day.”</h3>
-          <p style="margin: 0; color: #9AA6B0; font-size: 16px; line-height: 1.6">Month gives you priority updates for less than $0.34 a day.</p>
+          <p style="margin: 0; color: #9AA6B0; font-size: 16px; line-height: 1.6">Month gives you priority updates for just $0.33 a day.</p>
           <span style="color: #FFE418; font-weight: 700; margin-top: auto">Month plan →</span>
         </a>
       </div>
@@ -399,14 +395,14 @@ details[open]{border-color:#3A4651 !important}
           <tr style="border-bottom: 1px solid #26313B">
             <th scope="col" style="text-align: left; padding: 20px 24px; color: #9AA6B0; font-weight: 600"></th>
             <th scope="col" class="disp" style="padding: 20px 24px; font-size: 18px; color: #0B1015; background: #FFE418">GCS WARE</th>
-            <th scope="col" style="padding: 20px 24px; font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 18px; color: #9AA6B0">Typical alternatives</th>
+            <th scope="col" style="padding: 20px 24px; font-family: system-ui, sans-serif; font-weight: 600; font-size: 18px; color: #9AA6B0">Typical alternatives</th>
           </tr>
         </thead>
         <tbody>
-          <tr style="border-bottom: 1px solid #1F2A33"><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Update after CS2 patch</th><td style="text-align: center; padding: 18px 24px; font-weight: 700; color: #FFE418; background: rgba(255,228,24,0.05)">Max 6 hours</td><td style="text-align: center; padding: 18px 24px; color: #9AA6B0">Days to weeks</td></tr>
+          <tr style="border-bottom: 1px solid #1F2A33"><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Update after CS2 patch</th><td style="text-align: center; padding: 18px 24px; font-weight: 700; color: #FFE418; background: rgba(255,228,24,0.05)">6-hour target</td><td style="text-align: center; padding: 18px 24px; color: #9AA6B0">Days to weeks</td></tr>
           <tr style="border-bottom: 1px solid #1F2A33"><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Setup time</th><td style="text-align: center; padding: 18px 24px; font-weight: 700; color: #FFE418; background: rgba(255,228,24,0.05)">5 minutes</td><td style="text-align: center; padding: 18px 24px; color: #9AA6B0">Manual, guides needed</td></tr>
           <tr style="border-bottom: 1px solid #1F2A33"><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Performance impact</th><td style="text-align: center; padding: 18px 24px; font-weight: 700; color: #FFE418; background: rgba(255,228,24,0.05)">Minimal</td><td style="text-align: center; padding: 18px 24px; color: #9AA6B0">Noticeable FPS drops</td></tr>
-          <tr style="border-bottom: 1px solid #1F2A33"><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Cloud configs</th><td style="text-align: center; padding: 18px 24px; background: rgba(255,228,24,0.05)"><svg role="img" aria-label="Yes" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></td><td style="text-align: center; padding: 18px 24px"><svg role="img" aria-label="No" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6E7A84" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></td></tr>
+          <tr style="border-bottom: 1px solid #1F2A33"><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Cloud configs</th><td style="text-align: center; padding: 18px 24px; font-weight: 700; color: #FFE418; background: rgba(255,228,24,0.05)">Built in, one click</td><td style="text-align: center; padding: 18px 24px; color: #9AA6B0">Usually not</td></tr>
           <tr><th scope="row" style="text-align: left; padding: 18px 24px; font-weight: 600">Ticket reply time</th><td style="text-align: center; padding: 18px 24px; font-weight: 700; color: #FFE418; background: rgba(255,228,24,0.05)">Max 1 hour</td><td style="text-align: center; padding: 18px 24px; color: #9AA6B0">Often days</td></tr>
         </tbody>
       </table>
@@ -441,13 +437,13 @@ details[open]{border-color:#3A4651 !important}
     <div style="display: flex; flex-direction: column; gap: 18px; align-items: center; text-align: center">
       <span class="eyebrow" style="color: #FFE418">Pricing</span>
       <h2 class="sec-title disp" style="margin: 0; font-size: 56px; line-height: 1.02">Lock in the launch price</h2>
-      <p style="margin: 0; font-size: 18px; color: #B5C0C8">One-time payment. No hidden fees. Prices go back up when the timer hits zero.</p>
+      <p style="margin: 0; font-size: 18px; color: #B5C0C8">One-time payment. No hidden fees.<span data-sale hidden> Prices go back up when the timer hits zero.</span></p>
       <!-- Big countdown -->
-      <div role="timer" aria-label="Time left in the sale" style="display: flex; gap: 10px; margin-top: 6px">
-        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="d" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">00</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">DAYS</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="h" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">00</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">HRS</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="m" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">00</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">MIN</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="s" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">00</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">SEC</span></div>
+      <div role="timer" aria-label="Time left in the sale" data-sale hidden style="display: flex; gap: 10px; margin-top: 6px">
+        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="d" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">--</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">DAYS</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="h" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">--</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">HRS</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="m" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">--</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">MIN</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 12px 10px; background: #0F151C; border: 1px solid #2A3540; border-radius: 12px"><span class="mono" data-cd="s" style="font-size: 34px; font-weight: 700; color: #FFE418; line-height: 1">--</span><span class="mono" style="font-size: 11px; color: #9AA6B0; margin-top: 6px">SEC</span></div>
       </div>
     </div>
 
@@ -459,10 +455,9 @@ details[open]{border-color:#3A4651 !important}
         <div style="display: flex; flex-direction: column; gap: 12px; font-size: 16px; color: #C4CDD4">
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>All features</span>
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Patch updates</span>
-          <span style="display: flex; gap: 10px; color: #5A6670"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5A6670" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>Bonus config pack</span>
           <span style="display: flex; gap: 10px; color: #5A6670"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5A6670" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>Priority support</span>
         </div>
-        <a data-product="13203" class="btn-ghost" href="#" style="margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 54px; border: 1px solid #2A3540; border-radius: 12px; color: #F2F4F5; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 0.04em">Get day pass</a>
+        <a data-product="13203" class="btn-ghost" href="#" style="margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 54px; border: 1px solid #2A3540; border-radius: 12px; color: #F2F4F5; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 0.04em">Get day pass</a>
       </div>
       <!-- Week -->
       <div style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 22px; margin-top: 24px">
@@ -471,10 +466,9 @@ details[open]{border-color:#3A4651 !important}
         <div style="display: flex; flex-direction: column; gap: 12px; font-size: 16px; color: #C4CDD4">
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>All features</span>
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Patch updates</span>
-          <span style="display: flex; gap: 10px; color: #5A6670"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5A6670" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>Bonus config pack</span>
           <span style="display: flex; gap: 10px; color: #5A6670"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5A6670" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>Priority support</span>
         </div>
-        <a data-product="13202" class="btn-ghost" href="#" style="margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 54px; border: 1px solid #2A3540; border-radius: 12px; color: #F2F4F5; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 0.04em">Get week pass</a>
+        <a data-product="13202" class="btn-ghost" href="#" style="margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 54px; border: 1px solid #2A3540; border-radius: 12px; color: #F2F4F5; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 0.04em">Get week pass</a>
       </div>
       <!-- Month (hero plan) -->
       <div style="position: relative; background: linear-gradient(180deg, #1A1C0E 0%, #0F151C 60%); border: 2px solid #FFE418; border-radius: 18px; padding: 40px 32px 32px; display: flex; flex-direction: column; gap: 22px; box-shadow: 0 40px 90px rgba(255,228,24,0.16)">
@@ -484,12 +478,13 @@ details[open]{border-color:#3A4651 !important}
         <div style="display: flex; flex-direction: column; gap: 12px; font-size: 16px; color: #E1E6EA">
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>All features</span>
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Priority patch updates</span>
-          <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg><span><strong>FREE</strong> bonus config pack</span></span>
           <span style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE418" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Priority support + premium Discord role</span>
         </div>
-        <a data-product="13201" class="btn-primary shine" href="#" style="margin-top: auto; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 60px; background-color: #FFE418; border-radius: 12px; color: #0B1015; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: inset 0 -3px 0 rgba(0,0,0,0.18)">Claim the deal<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a data-product="13201" class="btn-primary shine" href="#" style="margin-top: auto; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 60px; background-color: #FFE418; border-radius: 12px; color: #0B1015; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: inset 0 -3px 0 rgba(0,0,0,0.18)">Claim the deal<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
       </div>
     </div>
+
+    <p style="margin: 0; align-self: center; max-width: 760px; text-align: center; color: #9AA6B0; font-size: 14px; line-height: 1.6">Keys are digital, so sales are final, except the Dead-Key Guarantee for a key that fails at delivery (report it within 48 hours). No refunds for detections, bans or downtime after game updates. <a href="/refund-policy/" style="font-weight: 700">Refund Policy</a></p>
 
     <!-- Trust row -->
     <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 28px; color: #9AA6B0; font-size: 14px; font-weight: 600">
@@ -512,12 +507,11 @@ details[open]{border-color:#3A4651 !important}
         <h3 class="disp" style="margin: 0; font-size: 32px">Your launch bundle</h3>
         <div style="display: flex; flex-direction: column">
           <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px dashed #26313B; font-size: 16px"><span>GCS Ware - 30 days full access</span><span class="mono" style="color: #9AA6B0">$11.99</span></div>
-          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px dashed #26313B; font-size: 16px"><span>Bonus: pro config pack</span><span class="mono" style="color: #9AA6B0">FREE</span></div>
-          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px dashed #26313B; font-size: 16px"><span>Bonus: priority Discord support</span><span class="mono" style="color: #9AA6B0">FREE</span></div>
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px dashed #26313B; font-size: 16px"><span>Priority Discord support</span><span class="mono" style="color: #9AA6B0">Included</span></div>
           <div style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0 0; font-size: 18px; font-weight: 700"><span>Total value</span><span class="mono" style="color: #9AA6B0; text-decoration: line-through">$11.99</span></div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-top: 6px"><span style="font-size: 18px; font-weight: 700; color: #FFE418">You pay today</span><span class="disp" style="font-size: 40px; color: #FFE418">$9.99</span></div>
         </div>
-        <a data-product="13201" class="btn-primary" href="#pricing" style="display: flex; align-items: center; justify-content: center; min-height: 58px; background: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.04em">Get the bundle</a>
+        <a data-product="13201" class="btn-primary" href="#pricing" style="display: flex; align-items: center; justify-content: center; min-height: 58px; background: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.04em">Get the bundle</a>
       </div>
     </div>
   </section>
@@ -532,7 +526,7 @@ details[open]{border-color:#3A4651 !important}
       <div style="display: flex; flex-direction: column; gap: 12px">
         <details open style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">What is GCS Ware?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
-          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">GCS Ware is lightweight software for Counter-Strike 2 with a clean in-game menu, cloud configs and same-day updates after every CS2 patch.</p>
+          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">GCS Ware is lightweight software for Counter-Strike 2 with a clean in-game menu, cloud configs and a 6-hour update target after every CS2 patch.</p>
         </details>
         <details style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">How fast do I get access?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
@@ -540,11 +534,11 @@ details[open]{border-color:#3A4651 !important}
         </details>
         <details style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">What happens when CS2 updates?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
-          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">We ship a fix within 6 hours of every Valve patch. The loader updates automatically, and live status is on this page and on Discord.</p>
+          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">We aim to ship a fix within 6 hours of every Valve patch, but the timing isn't guaranteed, and GCS Ware may not work until the fix is out. The loader updates automatically, and we post status updates on Discord.</p>
         </details>
         <details style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">Will it lower my FPS?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
-          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">No noticeable drop. GCS Ware is built lean, so any PC that runs CS2 smoothly runs it with GCS Ware too.</p>
+          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">Most players see no noticeable drop. GCS Ware is built lean, but performance can vary with your hardware and settings.</p>
         </details>
         <details style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">Is this a subscription?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
@@ -552,7 +546,7 @@ details[open]{border-color:#3A4651 !important}
         </details>
         <details style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">What are the system requirements?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
-          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">[REQUIREMENTS - e.g. Windows 10/11 64-bit, Intel/AMD CPU]</p>
+          <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">Windows 10 or 11 (64-bit) with an Intel or AMD processor. Nothing else is needed, but virtual machines are not supported.</p>
         </details>
         <details style="background: #0F151C; border: 1px solid #1F2A33; border-radius: 14px; padding: 0 24px">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 66px; font-weight: 600; font-size: 18px">Can I get a refund?<span class="plus" style="color: #FFE418; font-size: 26px; transition: transform .15s">+</span></summary>
@@ -563,7 +557,7 @@ details[open]{border-color:#3A4651 !important}
           <p style="margin: 0 0 22px; color: #9AA6B0; font-size: 16px; line-height: 1.6">Visa and Mastercard cards, Google Pay and BLIK.</p>
         </details>
       </div>
-      <p style="margin: 0; text-align: center; color: #9AA6B0; font-size: 16px">Still unsure? <a href="#" style="font-weight: 700">Ask us on Discord</a> - we reply instantly, max 1 hour.</p>
+      <p style="margin: 0; text-align: center; color: #9AA6B0; font-size: 16px">Still unsure? <a href="https://discord.gcscheats.com" target="_blank" rel="noopener" style="font-weight: 700">Ask us on Discord</a> - we reply instantly, max 1 hour.</p>
     </div>
   </section>
 
@@ -574,10 +568,10 @@ details[open]{border-color:#3A4651 !important}
       <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(closest-side at 50% 0%, rgba(255,228,24,0.14), transparent)"></div>
       <img class="floaty" src="assets/logo.png" alt="" aria-hidden="true" style="position: relative; width: 130px; height: 130px; object-fit: contain">
       <h2 class="sec-title disp" style="position: relative; margin: 0; font-size: 60px; line-height: 1">Your seat is waiting.<br><span style="color: #FFE418">Take it.</span></h2>
-      <p style="position: relative; margin: 0; font-size: 19px; color: #B5C0C8; max-width: 560px">17% off ends in <span class="mono" style="color: #F2F4F5; font-weight: 700"><span data-cd="d">00</span>d <span data-cd="h">00</span>h <span data-cd="m">00</span>m <span data-cd="s">00</span>s</span>. After that, it's back to $11.99/mo.</p>
+      <p data-sale hidden style="position: relative; margin: 0; font-size: 19px; color: #B5C0C8; max-width: 560px">17% off ends in <span class="mono" style="color: #F2F4F5; font-weight: 700"><span data-cd="d">--</span>d <span data-cd="h">--</span>h <span data-cd="m">--</span>m <span data-cd="s">--</span>s</span>. After that, it's back to $11.99 for 30 days.</p>
       <div style="position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px">
-        <a class="btn-primary shine" href="#pricing" style="display: inline-flex; align-items: center; gap: 12px; min-height: 66px; padding: 0 38px; background-color: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 20px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: 0 14px 40px rgba(255,228,24,0.35)">Get GCS Ware now<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-        <a class="btn-ghost" href="#" style="display: inline-flex; align-items: center; gap: 10px; min-height: 66px; padding: 0 26px; border: 1px solid #2A3540; border-radius: 12px; color: #F2F4F5; text-decoration: none; font-weight: 600; font-size: 17px">Join 7k+ players on Discord</a>
+        <a class="btn-primary shine" href="#pricing" style="display: inline-flex; align-items: center; gap: 12px; min-height: 66px; padding: 0 38px; background-color: #FFE418; color: #0B1015; border-radius: 12px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 20px; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: 0 14px 40px rgba(255,228,24,0.35)">Get GCS Ware now<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a class="btn-ghost" href="https://discord.gcscheats.com" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; min-height: 66px; padding: 0 26px; border: 1px solid #2A3540; border-radius: 12px; color: #F2F4F5; text-decoration: none; font-weight: 600; font-size: 17px">Join 7k+ players on Discord</a>
       </div>
       <span style="position: relative; color: #9AA6B0; font-size: 14px">Instant delivery · No auto-renew</span>
     </div>
@@ -590,7 +584,7 @@ details[open]{border-color:#3A4651 !important}
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px">
         <div style="display: flex; flex-direction: column; gap: 14px; max-width: 460px">
           <span style="display: flex; align-items: center; gap: 10px"><img src="assets/logo.png" alt="" aria-hidden="true" style="width: 36px; height: 36px; object-fit: contain"><span class="disp" style="font-size: 20px">GCS<span style="color: #FFE418">WARE</span></span></span>
-          <p style="margin: 0; color: #6E7A84; font-size: 14px; line-height: 1.7">GCS Ware is CS2 software for Counter-Strike 2 players who want a clean in-game menu, cloud configs and updates within 6 hours of every CS2 patch. Instant key delivery, 24/7 Discord support, day, week or month plans.</p>
+          <p style="margin: 0; color: #6E7A84; font-size: 14px; line-height: 1.7">GCS Ware is CS2 software for Counter-Strike 2 players who want a clean in-game menu, cloud configs and a 6-hour update target after every CS2 patch. Instant key delivery, 24/7 Discord support, day, week or month plans.</p>
         </div>
         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
           <span class="mono" style="color: #6E7A84; font-size: 12px">PRODUCT</span>
@@ -598,7 +592,7 @@ details[open]{border-color:#3A4651 !important}
         </div>
         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
           <span class="mono" style="color: #6E7A84; font-size: 12px">SUPPORT</span>
-          <a class="navlink" href="#faq">FAQ</a><a class="navlink" href="#">Discord</a><a class="navlink" href="#">Contact</a><a class="navlink" href="/refund-policy/">Refunds</a>
+          <a class="navlink" href="#faq">FAQ</a><a class="navlink" href="https://discord.gcscheats.com" target="_blank" rel="noopener">Discord</a><a class="navlink" href="https://gcscheats.com/contact/">Contact</a><a class="navlink" href="/refund-policy/">Refunds</a>
         </div>
         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
           <span class="mono" style="color: #6E7A84; font-size: 12px">LEGAL</span>
@@ -609,35 +603,41 @@ details[open]{border-color:#3A4651 !important}
     </div>
   </footer>
 
-  <!-- Recent purchase toast (wire to real orders) -->
-  <div class="toast" role="status" style="position: fixed; left: 20px; bottom: 96px; z-index: 25; align-items: center; gap: 12px; padding: 12px 16px; background: #111820; border: 1px solid #2A3540; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); max-width: 320px">
+  <!-- Recent purchase toast: filled from real store orders by the script at the bottom -->
+  <div class="toast" role="status" hidden style="position: fixed; left: 20px; bottom: 96px; z-index: 25; align-items: center; gap: 12px; padding: 12px 16px; background: #111820; border: 1px solid #2A3540; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); max-width: 320px">
     <img src="assets/logo.png" alt="" aria-hidden="true" style="width: 36px; height: 36px; object-fit: contain">
-    <span style="display: flex; flex-direction: column; font-size: 14px"><strong>[Name] from [Country]</strong><span style="color: #9AA6B0">bought Month · [X] min ago</span></span>
+    <span style="display: flex; flex-direction: column; font-size: 14px"><strong data-toast-title></strong><span data-toast-time style="color: #9AA6B0"></span></span>
   </div>
 
   <!-- Sticky desktop bar -->
-  <div class="desk-bar" style="position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 25; display: flex; align-items: center; gap: 18px; padding: 10px 10px 10px 22px; background: rgba(17,24,32,0.95); backdrop-filter: blur(10px); border: 1px solid #2A3540; border-radius: 14px; box-shadow: 0 20px 50px rgba(0,0,0,0.6)">
-    <span style="font-size: 15px; color: #C4CDD4"><strong style="color: #F2F4F5">17% off</strong> ends in <span class="mono" style="color: #FFE418; font-weight: 700"><span data-cd="h">00</span>:<span data-cd="m">00</span>:<span data-cd="s">00</span></span></span>
-    <a class="btn-primary" href="#pricing" style="display: inline-flex; align-items: center; min-height: 46px; padding: 0 22px; background: #FFE418; color: #0B1015; border-radius: 10px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 15px; text-transform: uppercase">Claim it</a>
+  <div class="desk-bar" data-sale hidden style="position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 25; display: flex; align-items: center; gap: 18px; padding: 10px 10px 10px 22px; background: rgba(17,24,32,0.95); backdrop-filter: blur(10px); border: 1px solid #2A3540; border-radius: 14px; box-shadow: 0 20px 50px rgba(0,0,0,0.6)">
+    <span style="font-size: 15px; color: #C4CDD4"><strong style="color: #F2F4F5">17% off</strong> ends in <span class="mono" style="color: #FFE418; font-weight: 700"><span data-cd="d">--</span>d <span data-cd="h">--</span>:<span data-cd="m">--</span>:<span data-cd="s">--</span></span></span>
+    <a class="btn-primary" href="#pricing" style="display: inline-flex; align-items: center; min-height: 46px; padding: 0 22px; background: #FFE418; color: #0B1015; border-radius: 10px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 15px; text-transform: uppercase">Claim it</a>
   </div>
 
   <!-- Sticky mobile CTA -->
   <div class="mobile-cta" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; padding: 12px 16px; background: rgba(8,12,16,0.96); border-top: 1px solid #26313B; align-items: center; justify-content: space-between; gap: 12px">
-    <span style="display: flex; flex-direction: column; font-size: 13px; color: #9AA6B0"><span>-17% · ends <span class="mono" style="color: #FFE418"><span data-cd="h">00</span>:<span data-cd="m">00</span>:<span data-cd="s">00</span></span></span><strong class="disp" style="font-size: 18px; color: #F2F4F5">From $1.99</strong></span>
-    <a class="btn-primary" href="#pricing" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #FFE418; color: #0B1015; border-radius: 10px; text-decoration: none; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase">Get access</a>
+    <span style="display: flex; flex-direction: column; font-size: 13px; color: #9AA6B0"><span data-sale hidden>-17% · ends <span class="mono" style="color: #FFE418; white-space: nowrap"><span data-cd="d">--</span>d <span data-cd="h">--</span>:<span data-cd="m">--</span>:<span data-cd="s">--</span></span></span><strong class="disp" style="font-size: 18px; color: #F2F4F5">From $1.99</strong></span>
+    <a class="btn-primary" href="#pricing" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #FFE418; color: #0B1015; border-radius: 10px; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; white-space: nowrap">Get access</a>
   </div>
 </div>
 
 <script>
   // Sale countdown - change SALE_ENDS to move the deadline (local time).
+  // Everything marked data-sale stays hidden unless the sale is running, so crawlers and
+  // visitors after the deadline never see a timer stuck at zero.
   const SALE_ENDS = '2026-10-31T23:59:00';
 
   (function () {
     const end = new Date(SALE_ENDS).getTime();
     const els = document.querySelectorAll('[data-cd]');
+    const sale = document.querySelectorAll('[data-sale]');
     const pad = (n) => String(n).padStart(2, '0');
     function tick() {
-      const left = Math.max(0, Math.floor(((isNaN(end) ? 0 : end) - Date.now()) / 1000));
+      const left = Math.floor((end - Date.now()) / 1000);
+      const live = left > 0; // false after the deadline, or if SALE_ENDS is not a valid date
+      sale.forEach((el) => { el.hidden = !live; });
+      if (!live) return false;
       const cd = {
         d: pad(Math.floor(left / 86400)),
         h: pad(Math.floor((left % 86400) / 3600)),
@@ -645,61 +645,30 @@ details[open]{border-color:#3A4651 !important}
         s: pad(left % 60)
       };
       els.forEach((el) => { el.textContent = cd[el.dataset.cd]; });
+      return true;
     }
-    tick();
-    setInterval(tick, 1000);
+    if (tick()) {
+      const timer = setInterval(() => { if (!tick()) clearInterval(timer); }, 1000);
+    }
   })();
 
-  // Demo videos (YouTube IDs) - swap the IDs/lengths here when you upload new versions.
-  const DEMO_VIDEOS = {
-    en: { id: 'uFCTG4RHhRM', len: '1:08', label: 'GCS Ware demo (English)' },
-    pl: { id: 'fp7E_L3bci4', len: '8:59', label: 'GCS Ware presentation (Polish)' }
-  };
-
+  // Demo video: the poster above links to it. To swap the video, change the poster's link, length
+  // and thumbnail. The thumbnail is self-hosted so the page doesn't contact Google until someone
+  // presses play: save the new one from https://i.ytimg.com/vi_webp/<ID>/maxresdefault.webp.
   (function () {
     const player = document.getElementById('demo-player');
-    const buttons = document.querySelectorAll('.lang-switch [data-lang]');
-    let lang = /^pl\b/i.test(navigator.language || '') ? 'pl' : 'en';
-    let playing = false;
-
-    function render() {
-      const v = DEMO_VIDEOS[lang];
-      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
-      player.textContent = '';
-
-      if (playing) {
-        // Real YouTube player - only loaded after the first click.
-        const f = document.createElement('iframe');
-        f.src = 'https://www.youtube-nocookie.com/embed/' + v.id + '?autoplay=1&rel=0&playsinline=1';
-        f.title = v.label;
-        f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-        f.referrerPolicy = 'strict-origin-when-cross-origin';
-        f.allowFullscreen = true;
-        player.appendChild(f);
-        return;
-      }
-
-      // Lightweight poster: thumbnail + play button (links to YouTube if JS is off).
-      const a = document.createElement('a');
-      a.className = 'yt-poster';
-      a.href = 'https://www.youtube.com/watch?v=' + v.id;
-      a.target = '_blank';
-      a.rel = 'noopener';
-      a.setAttribute('aria-label', 'Play: ' + v.label);
-      a.innerHTML =
-        '<img src="https://i.ytimg.com/vi/' + v.id + '/maxresdefault.jpg" alt="" loading="lazy">' +
-        '<span class="yt-play"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="#0B1015"><path d="M7 4v16l13-8z"></path></svg></span>' +
-        '<span class="yt-len mono">' + v.len + '</span>';
-      a.addEventListener('click', (e) => { e.preventDefault(); playing = true; render(); });
-      player.appendChild(a);
-    }
-
-    buttons.forEach((b) => b.addEventListener('click', () => {
-      if (b.dataset.lang === lang) return;
-      lang = b.dataset.lang;
-      render(); // if a video is already playing, the other language starts playing too
-    }));
-    render();
+    const poster = player.querySelector('.yt-poster');
+    poster.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Real YouTube player - only loaded after the click (the poster links to YouTube if JS is off).
+      const f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + new URL(poster.href).searchParams.get('v') + '?autoplay=1&rel=0&playsinline=1';
+      f.title = poster.getAttribute('aria-label').replace(/^[^:]*:\s*/, '');
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      f.allowFullscreen = true;
+      player.replaceChildren(f);
+    });
   })();
   // Checkout - buttons with data-product open Stripe via the store API (1 day 13203, 1 week 13202, 1 month 13201).
   const PAYMENT_API = 'https://gcscheats.com/api/payment';
@@ -754,6 +723,45 @@ details[open]{border-color:#3A4651 !important}
 
     // Coming back from Stripe with the Back button restores the page as it was - un-stick the buttons.
     window.addEventListener('pageshow', (e) => { if (e.persisted) buttons.forEach(reset); });
+  })();
+  // Recent purchase toast: the store's real latest order per plan (the API only says how long ago).
+  const RECENT_ORDERS_API = 'https://gcscheats.com/api/recent-orders';
+  const TOAST_TEXT = {
+    13203: 'Someone bought the Day pass',
+    13202: 'Someone bought the Week pass',
+    13201: 'Someone bought the Month plan',
+    ago: (m) => m < 60 ? m + ' min ago' : m < 1440 ? Math.floor(m / 60) + ' h ago' : Math.floor(m / 1440) === 1 ? '1 day ago' : Math.floor(m / 1440) + ' days ago'
+  };
+
+  (function () {
+    const toast = document.querySelector('.toast');
+    if (!toast || window.matchMedia('(max-width: 900px)').matches) return;
+    const title = toast.querySelector('[data-toast-title]');
+    const time = toast.querySelector('[data-toast-time]');
+    const MAX_AGE_MIN = 7 * 24 * 60;
+    const requests = [13201, 13202, 13203].map((id) =>
+      fetch(RECENT_ORDERS_API + '?product_id=' + id)
+        .then((r) => (r.ok ? r.json() : []))
+        .then((list) => (Array.isArray(list) ? list : []).map((o) => ({ id, minutes: Number(o.minutesAgo) })))
+        .catch(() => []));
+
+    Promise.all(requests).then((lists) => {
+      const orders = lists.flat()
+        .filter((o) => Number.isFinite(o.minutes) && o.minutes >= 0 && o.minutes <= MAX_AGE_MIN)
+        .sort((a, b) => a.minutes - b.minutes);
+      if (!orders.length) return;
+      const loadedAt = Date.now();
+      let i = 0;
+      function next() {
+        if (i >= orders.length) { toast.hidden = true; return; }
+        const o = orders[i++];
+        title.textContent = TOAST_TEXT[o.id];
+        time.textContent = TOAST_TEXT.ago(Math.max(1, o.minutes + Math.floor((Date.now() - loadedAt) / 60000)));
+        toast.hidden = false;
+        setTimeout(next, 8000);
+      }
+      setTimeout(next, 4000);
+    });
   })();
 </script>
 </body>

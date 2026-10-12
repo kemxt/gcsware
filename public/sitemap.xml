@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Only pages whose canonical URL is on gcsware.com. The English legal pages canonicalize to gcscheats.com, so they stay out. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://gcsware.com/</loc></url>
+  <url><loc>https://gcsware.com/pl/</loc></url>
+  <url><loc>https://gcsware.com/pl/refund-policy/</loc></url>
+</urlset>

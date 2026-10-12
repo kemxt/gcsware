@@ -1,5 +1,6 @@
 {
   "name": "gcsware",
+  "account_id": "15501adf41bdfa88f04324a8c7b0814c",
   "compatibility_date": "2026-10-10",
   "assets": {
     "directory": "./public"
