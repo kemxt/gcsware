@@ -670,7 +670,8 @@ details[open]{border-color:#3A4651 !important}
     });
   })();
   // Checkout - buttons with data-product open Stripe via the store API (1 day 13203, 1 week 13202, 1 month 13201).
-  const PAYMENT_API = 'https://gcscheats.com/api/payment';
+  // The call goes to this site, and src/worker.js passes it on to gcscheats.com (the store API has no CORS).
+  const PAYMENT_API = '/api/payment';
   const CHECKOUT_TEXT = { loading: 'Przekierowanie…', error: 'Nie udało się otworzyć płatności. Spróbuj ponownie albo napisz do nas na Discordzie.' };
 
   (function () {
@@ -724,7 +725,7 @@ details[open]{border-color:#3A4651 !important}
     window.addEventListener('pageshow', (e) => { if (e.persisted) buttons.forEach(reset); });
   })();
   // Recent purchase toast: the store's real latest order per plan (the API only says how long ago).
-  const RECENT_ORDERS_API = 'https://gcscheats.com/api/recent-orders';
+  const RECENT_ORDERS_API = '/api/recent-orders'; // passed on to gcscheats.com by src/worker.js
   const TOAST_TEXT = {
     13203: 'Ktoś kupił dostęp na dzień',
     13202: 'Ktoś kupił dostęp na tydzień',

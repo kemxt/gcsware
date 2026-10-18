@@ -2,8 +2,11 @@
   "name": "gcsware",
   "account_id": "15501adf41bdfa88f04324a8c7b0814c",
   "compatibility_date": "2026-10-10",
+  "main": "src/worker.js",
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
   },
   "routes": [
     { "pattern": "gcsware.com", "custom_domain": true }

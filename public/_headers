@@ -1,4 +1,5 @@
-# Only this site's own scripts run (plus the inline ones in the pages). The browser may call the
-# store API, and may frame YouTube's privacy-enhanced player once someone presses play.
+# Only this site's own scripts run (plus the inline ones in the pages), and the browser only talks to
+# this site (the store API is reached through src/worker.js). YouTube's privacy-enhanced player may be
+# framed once someone presses play.
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://gcscheats.com; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
