@@ -1,0 +1,15 @@
+{
+  "name": "GCS Ware",
+  "short_name": "GCS Ware",
+  "description": "Lightweight CS2 software, updated every patch.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#060607",
+  "theme_color": "#060607",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

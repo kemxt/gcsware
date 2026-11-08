@@ -1,7 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Only pages whose canonical URL is on gcsware.com. The English legal pages canonicalize to gcscheats.com, so they stay out. -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://gcsware.com/</loc></url>
-  <url><loc>https://gcsware.com/pl/</loc></url>
-  <url><loc>https://gcsware.com/pl/refund-policy/</loc></url>
+<!-- Only pages whose canonical URL is on gcsware.com. The English legal pages canonicalize to gcscheats.com, so they stay out.
+     Every English page and its Polish version list each other as language alternates (the same pairs as the hreflang
+     links in their <head>). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://gcsware.com/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcsware.com/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcsware.com/"/>
+  </url>
+  <url>
+    <loc>https://gcsware.com/pl/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcsware.com/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcsware.com/"/>
+  </url>
+  <url>
+    <loc>https://gcsware.com/guides/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcsware.com/guides/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/poradniki/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcsware.com/guides/"/>
+  </url>
+  <url>
+    <loc>https://gcsware.com/pl/poradniki/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcsware.com/guides/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/poradniki/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcsware.com/guides/"/>
+  </url>
+  <url>
+    <loc>https://gcsware.com/guides/fix-cs2-stutter/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcsware.com/guides/fix-cs2-stutter/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/poradniki/cs2-przycina-spadki-fps/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcsware.com/guides/fix-cs2-stutter/"/>
+  </url>
+  <url>
+    <loc>https://gcsware.com/pl/poradniki/cs2-przycina-spadki-fps/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcsware.com/guides/fix-cs2-stutter/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/poradniki/cs2-przycina-spadki-fps/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcsware.com/guides/fix-cs2-stutter/"/>
+  </url>
+  <url>
+    <loc>https://gcsware.com/guides/best-cs2-settings/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcsware.com/guides/best-cs2-settings/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/poradniki/najlepsze-ustawienia-cs2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcsware.com/guides/best-cs2-settings/"/>
+  </url>
+  <url>
+    <loc>https://gcsware.com/pl/poradniki/najlepsze-ustawienia-cs2/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcsware.com/guides/best-cs2-settings/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/poradniki/najlepsze-ustawienia-cs2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcsware.com/guides/best-cs2-settings/"/>
+  </url>
+  <url>
+    <loc>https://gcsware.com/guides/cs2-launch-options/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcsware.com/guides/cs2-launch-options/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/poradniki/opcje-uruchamiania-cs2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcsware.com/guides/cs2-launch-options/"/>
+  </url>
+  <url>
+    <loc>https://gcsware.com/pl/poradniki/opcje-uruchamiania-cs2/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcsware.com/guides/cs2-launch-options/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/poradniki/opcje-uruchamiania-cs2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcsware.com/guides/cs2-launch-options/"/>
+  </url>
+  <url>
+    <loc>https://gcsware.com/guides/cs2-autoexec/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcsware.com/guides/cs2-autoexec/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/poradniki/autoexec-cs2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcsware.com/guides/cs2-autoexec/"/>
+  </url>
+  <url>
+    <loc>https://gcsware.com/pl/poradniki/autoexec-cs2/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcsware.com/guides/cs2-autoexec/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/poradniki/autoexec-cs2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcsware.com/guides/cs2-autoexec/"/>
+  </url>
+  <url>
+    <loc>https://gcsware.com/pl/refund-policy/</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
 </urlset>

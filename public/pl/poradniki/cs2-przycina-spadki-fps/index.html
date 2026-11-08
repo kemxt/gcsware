@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CS2 przycina? Jak naprawić spadki FPS i stuttering | GCS Ware</title>
+<meta name="description" content="CS2 przycina, laguje albo traci klatki? Sprawdź, czy winny jest komputer, czy internet, i napraw to krok po kroku: limit FPS, sterowniki, grafika, Windows.">
+<meta name="theme-color" content="#060607">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://gcsware.com/pl/poradniki/cs2-przycina-spadki-fps/">
+<link rel="alternate" hreflang="en" href="https://gcsware.com/guides/fix-cs2-stutter/">
+<link rel="alternate" hreflang="pl" href="https://gcsware.com/pl/poradniki/cs2-przycina-spadki-fps/">
+<link rel="alternate" hreflang="x-default" href="https://gcsware.com/guides/fix-cs2-stutter/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GCS Ware">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://gcsware.com/pl/poradniki/cs2-przycina-spadki-fps/">
+<meta property="og:title" content="CS2 przycina? Jak naprawić stuttering i spadki FPS">
+<meta property="og:description" content="CS2 przycina, laguje albo traci klatki? Sprawdź, czy winny jest komputer, czy internet, i napraw to krok po kroku: limit FPS, sterowniki, grafika, Windows.">
+<meta property="og:image" content="https://gcsware.com/assets/og-pl.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GCS Ware do CS2: aktualizacja po każdym patchu, dostęp już od 1,99 $">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta property="article:section" content="Wydajność">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CS2 przycina? Jak naprawić stuttering i spadki FPS">
+<meta name="twitter:description" content="CS2 przycina, laguje albo traci klatki? Sprawdź, czy winny jest komputer, czy internet, i napraw to krok po kroku: limit FPS, sterowniki, grafika, Windows.">
+<meta name="twitter:image" content="https://gcsware.com/assets/og-pl.jpg">
+<link rel="stylesheet" href="/assets/site.css?v=20261108">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/assets/site.js?v=20261102" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://gcsware.com/#org","name":"GCS Ware","url":"https://gcsware.com/","logo":"https://gcsware.com/assets/logo.png"},{"@type":"WebSite","@id":"https://gcsware.com/#website","name":"GCS Ware","url":"https://gcsware.com/","inLanguage":["en","pl"],"publisher":{"@id":"https://gcsware.com/#org"}},{"@type":"BreadcrumbList","@id":"https://gcsware.com/pl/poradniki/cs2-przycina-spadki-fps/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"GCS Ware","item":"https://gcsware.com/pl/"},{"@type":"ListItem","position":2,"name":"Poradniki CS2","item":"https://gcsware.com/pl/poradniki/"},{"@type":"ListItem","position":3,"name":"CS2 przycina? Jak naprawić stuttering i spadki FPS","item":"https://gcsware.com/pl/poradniki/cs2-przycina-spadki-fps/"}]},{"@type":"TechArticle","@id":"https://gcsware.com/pl/poradniki/cs2-przycina-spadki-fps/#article","headline":"CS2 przycina? Jak naprawić stuttering i spadki FPS","description":"CS2 przycina, laguje albo traci klatki? Sprawdź, czy winny jest komputer, czy internet, i napraw to krok po kroku: limit FPS, sterowniki, grafika, Windows.","inLanguage":"pl","datePublished":"2026-11-08","dateModified":"2026-11-08","articleSection":"Wydajność","wordCount":1306,"author":{"@id":"https://gcsware.com/#org"},"publisher":{"@id":"https://gcsware.com/#org"},"mainEntityOfPage":"https://gcsware.com/pl/poradniki/cs2-przycina-spadki-fps/","isPartOf":{"@id":"https://gcsware.com/#website"},"breadcrumb":{"@id":"https://gcsware.com/pl/poradniki/cs2-przycina-spadki-fps/#breadcrumbs"},"image":{"@type":"ImageObject","url":"https://gcsware.com/assets/og-pl.jpg","width":1200,"height":630},"about":{"@type":"VideoGame","name":"Counter-Strike 2"}}]}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
+<header class="site-header">
+  <nav class="container nav" aria-label="Menu główne">
+    <a class="brand" href="/pl/">
+      <img src="/assets/logo-128.webp" width="36" height="36" alt="GCS Ware">
+      <span class="brand-word" aria-hidden="true">GCS<span>WARE</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/pl/#features">Funkcje</a></li>
+      <li><a href="/pl/#demo">Demo</a></li>
+      <li><a href="/pl/#compare">Porównanie</a></li>
+      <li><a href="/pl/#reviews">Opinie</a></li>
+      <li><a href="/pl/#pricing">Cennik</a></li>
+      <li><a href="/pl/#faq">FAQ</a></li>
+      <li><a href="/pl/poradniki/" aria-current="true">Poradniki</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang" role="group" aria-label="Język strony"><a href="/guides/fix-cs2-stutter/" lang="en" hreflang="en">EN</a><a href="/pl/poradniki/cs2-przycina-spadki-fps/" lang="pl" hreflang="pl" aria-current="page">PL</a></div>
+      <a class="btn btn-primary btn-sm" href="/pl/#pricing">Kup dostęp</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Otwórz menu"><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="/pl/#features">Funkcje</a></li>
+      <li><a href="/pl/#demo">Demo</a></li>
+      <li><a href="/pl/#compare">Porównanie</a></li>
+      <li><a href="/pl/#reviews">Opinie</a></li>
+      <li><a href="/pl/#pricing">Cennik</a></li>
+      <li><a href="/pl/#faq">FAQ</a></li>
+      <li><a href="/pl/poradniki/" aria-current="true">Poradniki</a></li>
+    </ul>
+    <div class="mobile-menu-foot">
+      <div class="lang" role="group" aria-label="Język strony"><a href="/guides/fix-cs2-stutter/" lang="en" hreflang="en">EN</a><a href="/pl/poradniki/cs2-przycina-spadki-fps/" lang="pl" hreflang="pl" aria-current="page">PL</a></div>
+      <a class="btn btn-primary" href="/pl/#pricing">Kup dostęp <span class="btn-sub">od 1,99 $</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="guide" id="main">
+  <div class="container">
+    <nav class="crumbs" aria-label="Ścieżka nawigacji"><ol><li><a href="/pl/">GCS Ware</a></li><li><a href="/pl/poradniki/">Poradniki CS2</a></li><li aria-current="page">CS2 przycina? Jak naprawić stuttering i&nbsp;spadki FPS</li></ol></nav>
+    <article>
+      <header class="guide-hero">
+        <p class="eyebrow">Wydajność</p>
+        <h1>CS2 przycina? Jak naprawić stuttering i&nbsp;spadki FPS</h1>
+        <p class="lead">Przycięcia na smoke'ach, spadki klatek w&nbsp;wymianach, gra, która przed ostatnią aktualizacją chodziła płynnie? Pokazujemy, jak znaleźć przyczynę i&nbsp;ją usunąć, od dwuminutowego limitu FPS po czystą instalację sterowników.</p>
+        <div class="guide-meta"><span>Zaktualizowano <time datetime="2026-11-08">8 listopada 2026</time></span><span>7 min czytania</span></div>
+      </header>
+      <div class="guide-layout">
+        <nav class="guide-toc" aria-labelledby="toc-title">
+          <p class="guide-toc-title" id="toc-title">Na tej stronie</p>
+          <ol>
+          <li><a href="#komputer-czy-internet">Komputer czy internet?</a></li>
+          <li><a href="#po-aktualizacji">Przycięcia zaraz po aktualizacji</a></li>
+          <li><a href="#limit-fps">Ogranicz FPS i&nbsp;wyłącz V-Sync</a></li>
+          <li><a href="#ustawienia-grafiki">Obniż najcięższe ustawienia grafiki</a></li>
+          <li><a href="#windows">Windows i&nbsp;sterowniki</a></li>
+          <li><a href="#sprzet">Sprawdź sprzęt</a></li>
+          <li><a href="#naprawa">Napraw instalację i&nbsp;cofnij tweaki</a></li>
+          <li><a href="#internet">Gdy winny jest internet</a></li>
+          </ol>
+        </nav>
+        <div class="guide-article">
+          <div class="prose">
+<div class="guide-summary">
+<h2 id="w-skrocie">W&nbsp;skrócie</h2>
+<ol>
+<li>Najpierw włącz licznik FPS i&nbsp;utraty pakietów, żeby wiedzieć, czy winny jest komputer, czy internet.</li>
+<li>Ustaw w&nbsp;CS2 prawdziwe odświeżanie monitora, wyłącz <strong>synchronizację pionową</strong> i&nbsp;włącz <strong>NVIDIA Reflex</strong>.</li>
+<li>Ogranicz FPS komendą <code class="nowrap">fps_max</code> do wartości, którą twój komputer utrzymuje przez większość meczu.</li>
+<li>Zaktualizuj sterowniki karty graficznej i&nbsp;daj grze mecz lub dwa na odbudowanie shaderów.</li>
+<li>Obniż najcięższe ustawienia: cienie, cząsteczki, okluzję otoczenia i&nbsp;antyaliasing.</li>
+<li>Wyłącz nakładki i&nbsp;ciężkie programy w&nbsp;tle, a&nbsp;w Windowsie ustaw tryb zasilania na najlepszą wydajność.</li>
+<li>Nadal przycina? Zweryfikuj pliki gry, usuń opcje uruchamiania i&nbsp;sprawdź jeszcze raz.</li>
+</ol>
+</div>
+
+<h2 id="komputer-czy-internet">Komputer czy internet?</h2>
+<p>„CS2 przycina” może oznaczać trzy różne problemy i&nbsp;każdy naprawia się inaczej. Zanim cokolwiek zmienisz, włącz nakładkę z&nbsp;telemetrią w&nbsp;<strong>Ustawienia → Gra → Telemetria</strong> (Settings → Game → Telemetry) i&nbsp;pokaż liczbę klatek, ping oraz utratę pakietów. Potem zagraj normalny mecz i&nbsp;patrz, co się dzieje w&nbsp;momencie przycięcia.</p>
+<ul>
+<li><strong>Niski FPS:</strong> licznik cały czas pokazuje mało klatek. Sprzęt nie wyrabia przy twoich ustawieniach, więc trzeba je obniżyć (o&nbsp;tym niżej).</li>
+<li><strong>Skoki czasu klatki:</strong> FPS wygląda dobrze, ale gra na ułamek sekundy staje, często przy smoke'u, molotovie, flashu albo szybkim obrocie. To klasyczny stuttering w&nbsp;CS2 i&nbsp;jemu poświęcona jest większość tego poradnika.</li>
+<li><strong>Lagi sieciowe:</strong> FPS jest stabilny, ale gracze się teleportują, strzały nie wchodzą albo cofa cię w&nbsp;miejscu. W&nbsp;telemetrii widać skoki pingu lub utratę pakietów. To wina łącza, nie komputera. Przejdź od razu do <a href="#internet">części o&nbsp;internecie</a>.</li>
+</ul>
+
+<h2 id="po-aktualizacji">Przycięcia zaraz po aktualizacji</h2>
+<p>CS2 kompiluje shadery pod twoją kartę graficzną. Po patchu gry albo nowych sterownikach ta praca zaczyna się od nowa i&nbsp;pierwszy mecz lub dwa potrafią mocno przycinać, zwłaszcza gdy dany efekt pojawia się na ekranie po raz pierwszy. Zwykle mija to samo, więc nie zmieniaj ustawień od razu po aktualizacji. Najpierw rozegraj kilka meczów.</p>
+<p>Masz kartę NVIDIA? Sprawdź, czy pamięć podręczna shaderów nie jest ograniczona: <strong>Panel sterowania NVIDIA → Zarządzaj ustawieniami 3D → Rozmiar pamięci podręcznej modułu cieniującego</strong>. Zostaw ustawienie domyślne sterownika albo daj więcej, ale nie wyłączaj go. Za mała pamięć zmusza sterownik do ciągłego budowania shaderów od nowa, a&nbsp;to wygląda dokładnie jak losowe przycięcia.</p>
+
+<h2 id="limit-fps">Ogranicz FPS i&nbsp;wyłącz V-Sync</h2>
+<p>Nielimitowany FPS nie zawsze jest najpłynniejszy. Na wielu komputerach liczba klatek skacze między bardzo wysokimi a&nbsp;dużo niższymi wartościami i&nbsp;właśnie te skoki czujesz jako przycięcia. Limit, który komputer utrzymuje przez większość czasu, daje równe czasy klatek, a&nbsp;równe klatki są przyjemniejsze niż wyższa średnia.</p>
+<ol>
+<li>Włącz konsolę w&nbsp;<strong>Ustawienia → Gra → Włącz konsolę deweloperską (~)</strong> (Enable Developer Console).</li>
+<li>Zagraj kilka minut z&nbsp;licznikiem FPS i&nbsp;zapamiętaj, ile klatek masz w&nbsp;gorących momentach, a&nbsp;nie na pustym respie.</li>
+<li>Otwórz konsolę klawiszem <kbd>~</kbd> i&nbsp;wpisz <code class="nowrap">fps_max</code> z&nbsp;wartością trochę niższą od tej liczby. <code class="nowrap">fps_max 0</code> znów zdejmuje limit.</li>
+<li>Komendą <code class="nowrap">fps_max_ui</code> ustaw niższy limit dla menu, żeby karta nie pracowała na pełnych obrotach w&nbsp;lobby.</li>
+</ol>
+<p>Potem wejdź w&nbsp;<strong>Ustawienia → Grafika</strong> (Settings → Video) i&nbsp;sprawdź podstawy. Częstotliwość odświeżania musi zgadzać się z&nbsp;monitorem, bo łatwo niechcący zostać na 60 Hz. <strong>Synchronizacja pionowa</strong> (Wait for Vertical Sync) powinna być wyłączona, bo dodaje opóźnienie. Na karcie NVIDIA ustaw <strong>NVIDIA Reflex</strong> na <strong>Włączone</strong>. Żeby limit FPS nie znikał po restarcie gry, wpisz go do swojego <a href="/pl/poradniki/autoexec-cs2/">autoexeca</a> albo dodaj <code class="nowrap">+fps_max</code> z&nbsp;wybraną wartością do <a href="/pl/poradniki/opcje-uruchamiania-cs2/">opcji uruchamiania</a>.</p>
+
+<h2 id="ustawienia-grafiki">Obniż najcięższe ustawienia grafiki</h2>
+<p>Kilka opcji w&nbsp;zaawansowanych ustawieniach grafiki (Advanced Video) odpowiada za większość skoków czasu klatki w&nbsp;ciężkich wymianach. Najgorsze są smoke'i, ogień i&nbsp;efekty granatów, więc zacznij od ustawień, które ich dotyczą. Nazwy w&nbsp;polskiej wersji gry mogą się minimalnie różnić, dlatego w&nbsp;tabeli podajemy też angielskie.</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">Ustawienie</th><th scope="col">Spróbuj</th><th scope="col">Dlaczego</th></tr></thead>
+<tbody>
+<tr><th scope="row">Szczegółowość cząsteczek (Particle Detail)</th><td>Niska</td><td>Smoke'i, molotovy i&nbsp;wybuchy to typowe momenty przycięć.</td></tr>
+<tr><th scope="row">Okluzja otoczenia (Ambient Occlusion)</th><td>Wyłączona</td><td>Kosztuje wydajność i&nbsp;nie pomaga widzieć przeciwników.</td></tr>
+<tr><th scope="row">Jakość cieni (Global Shadow Quality)</th><td>Średnia</td><td>Jedna z&nbsp;najcięższych opcji. Nie schodź niżej, niż musisz, bo cienie zdradzają pozycje graczy.</td></tr>
+<tr><th scope="row">Antyaliasing MSAA</th><td>2x MSAA lub CMAA2</td><td>8x MSAA mocno obciąża średnie i&nbsp;starsze karty.</td></tr>
+<tr><th scope="row">HDR (High Dynamic Range)</th><td>Wydajność</td><td>Lżejsze dla karty niż tryb jakości.</td></tr>
+<tr><th scope="row">Szczegółowość shaderów (Shader Detail)</th><td>Niska</td><td>Tani sposób na trochę zapasu.</td></tr>
+<tr><th scope="row">Dynamiczne cienie (Dynamic Shadows)</th><td>Tylko słońce</td><td>Tylko jeśli dalej brakuje klatek. Opcja „Wszystkie” pokazuje więcej cieni, a&nbsp;to pomaga wypatrzyć przeciwnika.</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Zwiększenie kontrastu graczy</strong> (Boost Player Contrast) zostaw włączone, chyba że naprawdę walczysz o&nbsp;każdą klatkę: kosztuje niewiele, a&nbsp;postacie lepiej odcinają się od tła. <strong>FidelityFX Super Resolution</strong> to ostateczność, bo gra renderuje się wtedy w&nbsp;niższej rozdzielczości i&nbsp;obraz robi się miękki. Wszystkie opcje po kolei omawiamy w&nbsp;poradniku <a href="/pl/poradniki/najlepsze-ustawienia-cs2/">najlepsze ustawienia CS2</a>.</p>
+
+<h2 id="windows">Windows i&nbsp;sterowniki</h2>
+<h3>Czysta instalacja sterowników</h3>
+<p>Zainstaluj najnowszy sterownik karty graficznej. Jeśli przycięcia zaczęły się po aktualizacji sterownika albo wcześniej w&nbsp;komputerze siedziała inna karta, wybierz w&nbsp;instalatorze opcję czystej instalacji, żeby stare profile i&nbsp;ustawienia nie przeszły dalej. Pamiętaj, że pierwszy mecz po instalacji odbudowuje pamięć shaderów.</p>
+<h3>Zasilanie</h3>
+<p>Ustaw w&nbsp;Windowsie tryb zasilania na najlepszą wydajność. Laptop musi być podłączony do ładowarki, a&nbsp;w <strong>Ustawienia → System → Ekran → Grafika</strong> możesz kazać Windowsowi uruchamiać CS2 na dedykowanej karcie: wybierz <strong>Wysoka wydajność</strong> dla <code class="nowrap">cs2.exe</code>. Na baterii albo zintegrowanej grafice przycięcia są praktycznie pewne.</p>
+<h3>Tryb gry i&nbsp;planowanie GPU</h3>
+<p>Zostaw włączony <strong>Tryb gry</strong> w&nbsp;<strong>Ustawienia → Granie → Tryb gry</strong>. Sprzętowo przyspieszane planowanie GPU na jednych komputerach pomaga, a&nbsp;na innych szkodzi, więc przetestuj obie opcje przez kilka meczów i&nbsp;zostaw tę, przy której gra jest płynniejsza. Zmiana wymaga restartu.</p>
+<h3>Nakładki i&nbsp;programy w&nbsp;tle</h3>
+<p>Wszystko, co rysuje się na grze albo działa obok niej, zabiera trochę czasu procesora, a&nbsp;CS2 jest na to wrażliwy. Wyłącz na próbę nakładkę Steam (Biblioteka → prawy przycisk na Counter-Strike 2 → <strong>Właściwości → Ogólne</strong>), nakładkę Discorda i&nbsp;wszelkie nakładki do nagrywania czy monitorowania wydajności. Zamknij przeglądarkę z&nbsp;odtwarzanym filmem, niepotrzebne programy od RGB i&nbsp;monitoringu sprzętu oraz duże pobierania. Jeśli korzystasz z&nbsp;dodatkowego softu do CS2, wybierz taki, który jest lekki; tak właśnie budujemy <a href="/pl/#features">GCS Ware</a>.</p>
+
+<h2 id="sprzet">Sprawdź sprzęt</h2>
+<ul>
+<li><strong>Temperatury:</strong> przegrzany procesor albo karta same zwalniają w&nbsp;trakcie meczu, a&nbsp;to wygląda jak przycięcia, które nasilają się z&nbsp;czasem. Wyczyść kurz, sprawdź wentylatory i&nbsp;nie zasłaniaj kratek w&nbsp;laptopie.</li>
+<li><strong>RAM:</strong> upewnij się, że w&nbsp;BIOS-ie jest włączony profil XMP (Intel) lub EXPO (AMD), bo bez niego pamięć działa dużo wolniej, niż powinna. Dla CS2 liczą się też dwie kości we właściwych slotach (dual channel).</li>
+<li><strong>Dysk:</strong> jeśli możesz, zainstaluj CS2 na dysku SSD i&nbsp;zostaw na nim trochę wolnego miejsca. Wczytywanie tekstur i&nbsp;shaderów z&nbsp;wolnego, zapchanego dysku HDD powoduje przycięcia.</li>
+</ul>
+
+<h2 id="naprawa">Napraw instalację i&nbsp;cofnij tweaki</h2>
+<p>Uszkodzone albo niedokończone pliki gry powodują przycięcia, których nie naprawi żadne ustawienie. W&nbsp;Steamie kliknij prawym przyciskiem Counter-Strike 2 i&nbsp;wybierz <strong>Właściwości → Zainstalowane pliki → Zweryfikuj spójność plików gry</strong>. Steam podmieni wszystko, co się nie zgadza.</p>
+<p>Potem wyłącz własne tweaki, żeby je wykluczyć. Wyczyść opcje uruchamiania i&nbsp;sprawdź grę zupełnie bez nich. Wiele list „na więcej FPS” to pozostałości z&nbsp;CS:GO, które nic nie dają albo szkodzą (w&nbsp;poradniku <a href="/pl/poradniki/opcje-uruchamiania-cs2/">opcje uruchamiania CS2</a> wyjaśniamy, które jeszcze mają sens). Jeśli masz autoexeca pełnego starych komend, na czas testu zmień mu nazwę. Gdy na czystej konfiguracji gra chodzi płynnie, dodawaj swoje zmiany z&nbsp;powrotem po jednej.</p>
+
+<h2 id="internet">Gdy winny jest internet</h2>
+<p>Jeśli w&nbsp;momentach przycięć telemetria pokazuje skoki pingu albo utratę pakietów, żadne ustawienie grafiki nie pomoże. Spróbuj tego:</p>
+<ul>
+<li>Jeśli możesz, podłącz komputer kablem zamiast przez Wi-Fi. Zakłócenia sieci bezprzewodowej to częsta przyczyna utraty pakietów.</li>
+<li>Na czas gry wstrzymaj pobierania, streamy i&nbsp;kopie zapasowe w&nbsp;chmurze, także na innych urządzeniach w&nbsp;domu.</li>
+<li>Jeśli problem pojawił się nagle, zrestartuj router i&nbsp;modem.</li>
+<li>Jeśli pakiety giną regularnie, w&nbsp;<strong>Ustawienia → Gra</strong> ustaw buforowanie wygładzające utratę pakietów (Buffering to smooth over packet loss) na jeden pakiet. To dodaje małe opóźnienie, więc przy czystym łączu zostaw tę opcję wyłączoną.</li>
+</ul>
+<div class="callout"><p><strong>Wskazówka:</strong> zmieniaj jedną rzecz naraz i&nbsp;przed oceną zagraj co najmniej jeden pełny mecz. Przycięcia zależą od mapy, serwera i&nbsp;liczby efektów na ekranie, więc jedna runda na pustym serwerze mówi bardzo niewiele.</p></div>
+          </div>
+        <aside class="guide-cta" aria-labelledby="cta-title">
+          <img src="/assets/logo-128.webp" width="56" height="56" alt="" loading="lazy" decoding="async">
+          <div>
+            <h2 id="cta-title">GCS Ware: lekki soft do CS2</h2>
+            <p>Przejrzyste menu w&nbsp;grze, configi w&nbsp;chmurze jednym kliknięciem, minimalny wpływ na FPS i&nbsp;aktualizacja docelowo do 6 godzin po każdym patchu Valve. Dostęp od 1,99 $, płatność także BLIK-iem, klucz od ręki.</p>
+            <div class="guide-cta-actions"><a class="btn btn-primary" href="/pl/#pricing">Zobacz cennik</a><a class="link-more" href="/pl/#features">Poznaj funkcje</a></div>
+          </div>
+        </aside>
+        </div>
+      </div>
+    </article>
+    <section class="guide-related" aria-labelledby="related-title">
+      <h2 class="h3" id="related-title">Więcej poradników CS2</h2>
+      <div class="guide-cards">
+        <article class="tile guide-card">
+          <span class="tag">Ustawienia · 9 min</span>
+          <h3 class="card-title"><a href="/pl/poradniki/najlepsze-ustawienia-cs2/">Najlepsze ustawienia CS2: grafika, rozdzielczość, dźwięk i&nbsp;czułość myszki</a></h3>
+          <p>Ustawienia grafiki, rozdzielczości, dźwięku i&nbsp;myszki w&nbsp;CS2: co daje więcej FPS, a&nbsp;co lepszą widoczność.</p>
+          <span class="link-more" aria-hidden="true">Czytaj poradnik</span>
+        </article>
+        <article class="tile guide-card">
+          <span class="tag">Konfiguracja · 8 min</span>
+          <h3 class="card-title"><a href="/pl/poradniki/opcje-uruchamiania-cs2/">Opcje uruchamiania CS2: jak je ustawić i&nbsp;które naprawdę pomagają</a></h3>
+          <p>Jak ustawić opcje uruchamiania CS2 w&nbsp;Steamie, jaki minimalny zestaw wpisać i&nbsp;które stare opcje z&nbsp;CS:GO usunąć.</p>
+          <span class="link-more" aria-hidden="true">Czytaj poradnik</span>
+        </article>
+        <article class="tile guide-card">
+          <span class="tag">Configi · 9 min</span>
+          <h3 class="card-title"><a href="/pl/poradniki/autoexec-cs2/">Autoexec CS2: gdzie go wrzucić, jak go zrobić i&nbsp;gotowy config na start</a></h3>
+          <p>Gdzie wrzucić autoexec.cfg w&nbsp;CS2, jak sprawić, żeby odpalał się przy każdym starcie, i&nbsp;gotowy config do dostosowania.</p>
+          <span class="link-more" aria-hidden="true">Czytaj poradnik</span>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="/pl/"><img src="/assets/logo-128.webp" width="36" height="36" alt="GCS Ware" loading="lazy"><span class="brand-word" aria-hidden="true">GCS<span>WARE</span></span></a>
+        <p>GCS Ware to oprogramowanie do Counter-Strike 2 dla graczy, którzy chcą przejrzystego menu w grze, configów w chmurze i aktualizacji docelowo do 6 godzin po każdym patchu CS2. Klucz od ręki, wsparcie 24/7 na Discordzie, dostęp na dzień, tydzień lub miesiąc.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-product">
+        <h2 id="f-product">Produkt</h2>
+        <ul><li><a href="/pl/#features">Funkcje</a></li><li><a href="/pl/#pricing">Cennik</a></li><li><a href="/pl/#reviews">Opinie</a></li><li><a href="https://discord.gcscheats.com" target="_blank" rel="noopener">Status</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-guides">
+        <h2 id="f-guides">Poradniki CS2</h2>
+        <ul><li><a href="/pl/poradniki/cs2-przycina-spadki-fps/">CS2 przycina</a></li><li><a href="/pl/poradniki/najlepsze-ustawienia-cs2/">Ustawienia CS2</a></li><li><a href="/pl/poradniki/opcje-uruchamiania-cs2/">Opcje uruchamiania</a></li><li><a href="/pl/poradniki/autoexec-cs2/">Autoexec CS2</a></li><li><a href="/pl/poradniki/">Wszystkie poradniki</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-support">
+        <h2 id="f-support">Pomoc</h2>
+        <ul><li><a href="/pl/#faq">FAQ</a></li><li><a href="https://discord.gcscheats.com" target="_blank" rel="noopener">Discord</a></li><li><a href="https://gcscheats.com/contact/">Kontakt</a></li><li><a href="/pl/refund-policy/">Zwroty</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="f-legal">
+        <h2 id="f-legal">Informacje prawne</h2>
+        <ul><li><a href="/terms/" hreflang="en">Regulamin</a></li><li><a href="/privacy/" hreflang="en">Polityka prywatności</a></li><li><a href="/pl/refund-policy/">Polityka zwrotów</a></li></ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 GCS Ware. Nie jesteśmy powiązani z Valve Corporation. Counter-Strike jest znakiem towarowym firmy Valve.</span>
+      <div class="lang" role="group" aria-label="Język strony"><a href="/guides/fix-cs2-stutter/" lang="en" hreflang="en">EN</a><a href="/pl/poradniki/cs2-przycina-spadki-fps/" lang="pl" hreflang="pl" aria-current="page">PL</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
